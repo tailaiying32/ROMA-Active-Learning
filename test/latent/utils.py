@@ -1,0 +1,9 @@
+"""Re-export shared utilities from active_learning.src.utils."""
+
+import os
+import sys
+
+# Add project root to sys.path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../')))
+
+from active_learning.src.utils import load_decoder_model

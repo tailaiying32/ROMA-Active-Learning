@@ -1,0 +1,309 @@
+# LATENT SPACE ACTIVE LEARNING CONFIGURATION
+# Configuration for latent-space active learning with SVGD posterior inference
+
+# ===== BALD Acquisition Settings =====
+bald:
+  tau: 0.3  # Sigmoid temperature (lower = sharper feasibility boundary)
+  tau_schedule:
+    start: 0.5
+    end: 0.2
+    duration: 100
+    schedule: linear
+
+  n_mc_samples: 100  # Number of Monte Carlo samples for BALD estimation
+  sampling_temperature: 1.0  # Temperature scaling for sampling
+
+  boundary_weight: 0.0  # [DEPRECATED] Weight for boundary-aware exploration
+
+  # Weighted BALD settings (Targeted Boundary Exploration)
+  use_weighted_bald: false  # Enable Weighted BALD (score * gate)
+  weighted_bald_sigma: 0.1  # Width of the Gaussian gate around p=0.5
+  weighted_bald_sigma_schedule:
+    start: 0.25
+    end: 0.1
+    duration: 100
+    schedule: linear
+
+  diversity_weight: 0.0  # Weight for sequential diversity bonus
+  use_anatomical_bounds: true  # Constrain test points to anatomical limits
+
+# ===== G-BALD (Geometric BALD) Settings =====
+# Combines BALD uncertainty with ellipsoid-based core-set diversity
+gbald:
+  tau: 0.3  # Sigmoid temperature for feasibility predictions
+  tau_schedule:
+    start: 0.5
+    end: 0.2
+    duration: 100
+    schedule: linear
+  n_samples: 32  # Number of posterior samples for BALD computation
+  eta: 2.0  # Boundary penalty steepness (higher = sharper cutoff at ellipsoid surface)
+  diversity_weight: 1.0  # Exponent λ_d for diversity term (0 = pure BALD)
+  diversity_weight_schedule:  # Anneal diversity weight over time (high early, low late)
+    start: 1.0  # Strong diversity during exploration phase
+    end: 0.0    # Minimal diversity during exploitation/refinement phase
+    duration: 25
+    schedule: linear
+  boundary_weight: 0.0  # Exponent λ_b for boundary penalty (0 = no outlier penalty)
+  use_log_scale: true  # Use log-scale combination (more numerically stable)
+  diversity_normalization: max  # 'max' or 'softmax' for diversity score normalization
+
+  # Ellipsoid stability settings (prevents collapse when covariance is poorly estimated)
+  min_points_for_ellipsoid: 12  # Require 3*dim points before enabling Mahalanobis distance
+  boundary_warmup_queries: 8  # Gradually ramp up boundary penalty over this many queries after ellipsoid valid
+
+# ===== k-BALD (Batch BALD) Settings =====
+# Greedy BatchBALD approximation - selects k diverse, informative tests per batch
+kbald:
+  batch_size: 5  # Number of tests to select per batch
+  n_candidates: 5000  # Candidate pool size for greedy selection
+  diversity_weight: 0.5  # Weight for redundancy penalty (0 = pure BALD, higher = more diversity)
+  n_samples: 32  # Number of posterior samples for BALD computation
+  tau: 0.3  # Sigmoid temperature for feasibility predictions
+  tau_schedule:
+    start: 0.5
+    end: 0.2
+    duration: 100
+    schedule: linear
+
+# ===== Visualization Settings =====
+visualization:
+  cap_joint_evolution_to_anatomical: false  # Cap y-axis to anatomical limits
+
+  # Boundary projection settings
+  use_marginal_envelope: false  # Use envelope projection instead of slices
+  n_marginal_samples: 50  # Samples for marginalization (higher = smoother but slower)
+
+# ===== Metrics Evaluation Settings =====
+metrics:
+  grid_resolution: 16  # Resolution for reachability metric evaluation grid
+
+# ===== Acquisition Strategy Settings =====
+acquisition:
+  strategy: bald  # Options: 'bald', 'random', 'quasi-random', 'prior-boundary', 'multi-stage-warmup'
+  epsilon: 0.0  # Epsilon-greedy exploration rate
+  epsilon_decay: 0.95  # Decay factor per iteration
+
+  # Canonical/hybrid settings
+  n_canonical: 5
+  canonical_path: models/canonical_queries.npz
+
+  # Quasi-random settings
+  n_quasi_random: 15  # Number of initial Sobol points before BALD
+
+  # Prior boundary settings
+  n_prior_boundary: 15  # Number of prior boundary queries before BALD
+
+  # Grid strategy settings
+  grid_strategy_resolution: 16
+
+  # Multi-stage warmup settings (iterative posterior boundary targeting)
+  multi_stage_warmup:
+    n_stages: 20  # Max number of boundary-targeting stages (set high to stay in staged mode)
+    queries_per_stage: 5  # Queries per stage
+    n_candidates: 10000  # Candidate pool size for boundary search
+    boundary_percentile: 0.05  # Fraction of candidates closest to p=0.5
+    use_farthest_point: true  # Use farthest-point sampling for diversity
+    final_phase: bald  # After warmup: 'bald', 'posterior_boundary', or 'stop'
+
+    # Adaptive stopping (switch to final_phase when entropy threshold met)
+    adaptive_stopping: false  # Disabled - staged warmup is better than final phase
+    entropy_threshold: 0.999  # Entropy threshold (~50% feasibility ratio)
+    window_size: 15  # Rolling window for entropy computation
+    min_warmup_queries: 10  # Minimum queries before checking entropy
+
+# ===== BALD Optimization (Test Selection) Settings =====
+bald_optimization:
+  n_restarts: 20  # Number of random restarts
+  n_iters_per_restart: 30  # Iterations per restart
+  lr_adam: 0.05  # Learning rate for ADAM phase
+  lr_sgd: 0.01  # Learning rate for SGD phase
+  switch_to_sgd_at: 0.8  # Fraction before switching ADAM -> SGD
+  plateau_patience: 10  # Stop if BALD plateaus this many iterations
+  plateau_threshold: 0.00037  # Minimum improvement threshold
+
+# ===== Variational Inference Settings =====
+vi:
+  n_mc_samples: 100  # MC samples for ELBO estimation
+  noise_std: 1.0  # Gaussian likelihood noise std
+  learning_rate: 0.05842346969502842
+  optimizer_type: adam
+  max_iters: 500
+  convergence_tol: 0.0005778
+  patience: 10
+  grad_clip: 3.0
+
+  # KL Annealing (controls regularization strength over time)
+  kl_annealing:
+    enabled: true
+    start_weight: 0.01
+    end_weight: 1.0
+    duration: 100
+    schedule: linear
+
+# ===== Stopping Criteria =====
+stopping:
+  budget: 20  # Maximum number of queries (hard limit)
+
+  # ELBO Plateau Stopping
+  elbo_plateau_enabled: false
+  elbo_plateau_window: 3
+  elbo_plateau_threshold: 0.01
+
+  # Posterior Uncertainty Stopping
+  uncertainty_enabled: false
+  uncertainty_threshold: 0.02
+  uncertainty_params: all
+
+  # BALD Score Stopping
+  bald_enabled: false
+  bald_threshold: 0.1
+  bald_patience: 3
+
+# ===== Prior Distribution Configuration =====
+prior:
+  mean_noise_std: 0.0  # Noise added to prior mean
+  init_std: 2.5  # Initial std for Gaussian prior
+
+  use_uniform_prior: false
+  use_population_mean_prior: true  # Use mean of training embeddings as prior mean
+  use_empirical_covariance: true  # Use empirical covariance from training data
+  use_anatomical_limit_prior: false
+
+  joint_names:
+    - shoulder_flexion_r
+    - shoulder_abduction_r
+    - shoulder_rotation_r
+    - elbow_flexion_r
+
+  units: degrees
+
+  # Wide anatomical limits (full ROM exploration)
+  anatomical_limits:
+    shoulder_flexion_r: [-15, 195]
+    shoulder_abduction_r: [-175, 145]
+    shoulder_rotation_r: [-145, 200]
+    elbow_flexion_r: [-30, 175]
+
+  pair_names:
+    - [shoulder_flexion_r, shoulder_abduction_r]
+    - [shoulder_flexion_r, shoulder_rotation_r]
+    - [shoulder_flexion_r, elbow_flexion_r]
+    - [shoulder_abduction_r, shoulder_rotation_r]
+    - [shoulder_abduction_r, elbow_flexion_r]
+    - [shoulder_rotation_r, elbow_flexion_r]
+
+update_posterior: true
+seed: null
+
+# ===== Latent Space Configuration =====
+latent:
+  latent_dim: 32  # Must match trained model
+  model_path: ../models/best_model.pt
+  dataset_path: ../models/training_data.npz
+
+# ===== Ensemble Configuration (for ensemble posterior) =====
+ensemble:
+  ensemble_size: 5
+  init_noise_std: 0.4
+
+# ===== Posterior Method Selection =====
+posterior:
+  method: projected_svgd  # Options: 'vi', 'ensemble', 'svgd', 'sliced_svgd', 'projected_svgd'
+  n_particles: 50  # Number of particles for SVGD methods
+
+# ===== Standard SVGD Settings =====
+svgd:
+  step_size: 0.1
+  step_decay:
+    enabled: false
+    power: 0.2
+  max_iters: 100
+  prior_weight: 1.0
+  repulsive_scaling: 0.0  # D^alpha scaling for repulsive force (0 = no scaling)
+
+  kl_annealing:
+    enabled: true
+    start_weight: 0.2
+    end_weight: 1.0
+    duration: 40
+    schedule: linear
+
+# ===== Sliced SVGD Settings =====
+sliced_svgd:
+  step_size: 0.12
+  step_decay:
+    enabled: false
+    power: 0.2
+  max_iters: 50
+  n_slices: 20  # Number of random projection directions
+  kernel_type: imq  # 'rbf' or 'imq' (inverse multiquadric)
+  prior_weight: 0.003
+
+  kl_annealing:
+    enabled: true
+    start_weight: 0.05
+    end_weight: 0.15
+    duration: 100
+    schedule: linear
+
+# ===== Projected SVGD Settings =====
+projected_svgd:
+  step_decay:
+    enabled: true
+    schedule: linear  # 'linear', 'cosine', 'exponential', or 'power' (legacy)
+    start_lr: 0.03
+    end_lr: 0.012
+    duration: 78  # When end_lr is reached (defaults to max_iters if not set)
+    # power: 0.5  # Only used if schedule: power (legacy n_data-based decay)
+  max_iters: 100
+  n_slices: 20  # Random directions to add beyond PCA
+  variance_threshold: 0.95  # PCA variance to retain
+  kernel_type: imq
+  max_eigenweight: 3.0  # Cap on eigenvalue weighting
+  eigen_smoothing: 0.5  # Smoothing for eigenvalue weights
+  prior_weight: 0.003
+
+  kl_annealing:
+    enabled: true
+    start_weight: 0.35
+    end_weight: 1.34
+    duration: 44
+    schedule: linear
+
+# ===== Projected SVN Settings (Stein Variational Newton) =====
+# Uses Hessian eigenvectors for faster convergence via Newton preconditioning
+projected_svn:
+  # Subspace dimensions
+  n_eigenvectors: 10          # Number of Hessian eigenvectors for projection
+  n_random_slices: 10         # Random directions for coverage of low-curvature dims
+
+  # Hessian computation
+  use_gauss_newton: true      # Use Gauss-Newton (Fisher) approximation (faster)
+  hessian_update_freq: 5      # Recompute Hessian eigenbasis every N inner iters
+  regularization: 0.0001      # Tikhonov regularization for (λ + ε)^{-1} stability
+  include_prior_hessian: true # Include prior precision in Hessian estimate
+
+  # Kernel settings (same as projected_svgd)
+  kernel_type: imq
+  kernel_width: null          # null = median heuristic
+
+  # Optimization (inherits from projected_svgd if not specified)
+  max_iters: 50               # Fewer iters needed (Newton converges faster)
+  prior_weight: 0.003
+
+  # Step decay (same schedule as projected_svgd)
+  step_decay:
+    enabled: true
+    schedule: linear
+    start_lr: 0.03
+    end_lr: 0.012
+    duration: 50
+
+  # KL annealing (same as projected_svgd)
+  kl_annealing:
+    enabled: true
+    start_weight: 0.35
+    end_weight: 1.34
+    duration: 44
+    schedule: linear

@@ -1,0 +1,107 @@
+CmaOptimizer {
+	signature_prefix = DATE_TIME
+	min_progress = 1e-5
+	update_eigen_modulo = 100
+	enable_boundary_transformer = 1
+	init { file = ../par/ReachUpperV5-194.par std_factor = 20 }
+	
+	SimulationObjective {
+		$rest_dur = 0.5
+		$trg_dur = 1.5
+		$react_dur = 1.0
+		max_duration = 7
+		signature_postfix = T10
+		
+		# Model
+		ModelHyfydyPrecise {
+			model_file = ../models/HTSA35T-2025-08-13.hfd
+			state_init_file = ../init/InitHSA35v3.zml
+			fixed_control_step_size = 0.005
+			zero_velocity_equilibration = 1
+			min_muscle_activation = 0
+			enable_dof_actuators = 0
+		}
+		
+		# Controller		
+		$torso_muscles = "*_obl*;*_lumb*;iliocostalis*;longissimus*;spinalis*;*_abd*"
+		$neck_muscles = "*_cap_*;cleid_*;stern_*;scalenus_*"
+		CompositeController {
+			# Head posture Controller
+			<< ../controllers/Neck1PostureV1.scone >>
+			
+			# Reaching Controller
+			SequentialController {
+				transition_intervals = [ $rest_dur ]
+				FeedForwardController { name = Relax1 symmetric = 1 Constant { value = 0.02 } }
+				
+				CompositeController {
+					# Arm Controller
+					SequentialController {
+						transition_intervals = [ $trg_dur $trg_dur $trg_dur ]
+						child_names = [ Up. Fr. Bh. Sd. ]
+						FeedForwardController {
+							symmetric = 0
+							include = "*"
+							exclude = "${neck_muscles}"
+							PieceWiseLinear {
+								control_points = 2
+								control_point_y = 0.03~0.001<0,1>
+								control_point_dt = 0.4~0.001<0.1,1.0>
+								flat_extrapolation = 1
+							}
+						}
+					}
+				}
+			}			
+		}
+		
+		# Measure
+		CompositeMeasure {
+			use_first_non_zero_result = 1
+			BodyMeasure {
+				name = TorsoPosture
+				weight = 1000
+				threshold = 0.2
+				body = thorax
+				offset = [ 0.0413 -1.195 0 ]
+				position { min = 0 max = 0 abs_penalty = 1 }
+			}
+			CompositeMeasure {
+				BodyMeasure {
+					start_time = $rest_dur
+					name = HeadPosture
+					weight = 10
+					threshold = 0.1
+					body = skull
+					orientation { min = 0 max = 0 abs_penalty = 1 }
+					angular_velocity { min = 0 max = 0 abs_penalty = 0.5 }
+				}
+				BodyMeasure {
+					start_time = $rest_dur
+					name = HandPosture
+					weight = 20
+					threshold = 0.1
+					body = hand_l
+					velocity { min = 0 max = 0 abs_penalty = 1 }
+					angular_velocity { min = 0 max = 0 abs_penalty = 0.2 }
+				}
+				ScriptMeasure {
+					weight = 100
+					threshold = 0.04
+					vel_penalty = 0.5
+					start_time = $rest_dur
+					target_duration = $trg_dur
+					react_time = $react_dur
+					show_target = 1
+					minimize = 1
+					target_body = "hand_r"
+					script_file = "../measures/ReachSequenceMeasureV4b.lua"
+				}
+			}
+			EffortMeasure {
+				weight = 0.1
+				measure_type = SquaredMuscleActivation
+			}
+		}
+	}
+}

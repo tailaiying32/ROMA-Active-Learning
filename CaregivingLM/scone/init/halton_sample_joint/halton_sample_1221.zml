@@ -1,0 +1,30 @@
+values {
+	clavicle_protraction_r = 0.040313
+	clavicle_elevation_r = -0.107797
+	clavicle_rotation_r = -0.177599
+	scapula_abduction_r = -0.386841
+	scapula_elevation_r = 0.497787
+	scapula_winging_r = 0.139330
+	shoulder_flexion_r = 0.167439
+	shoulder_abduction_r = 1.088981
+	shoulder_rotation_r = -0.879716
+	elbow_flexion_r = 1.996581
+	forearm_pronation_r = 0.863940
+	wrist_flexion_r = -0.505189
+	radial_deviation_r = 0.217793
+}
+velocities {
+	clavicle_protraction_r = 0.000000
+	clavicle_elevation_r = 0.000000
+	clavicle_rotation_r = 0.000000
+	scapula_abduction_r = 0.000000
+	scapula_elevation_r = 0.000000
+	scapula_winging_r = 0.000000
+	shoulder_flexion_r = 0.000000
+	shoulder_abduction_r = 0.000000
+	shoulder_rotation_r = 0.000000
+	elbow_flexion_r = 0.000000
+	forearm_pronation_r = 0.000000
+	wrist_flexion_r = 0.000000
+	radial_deviation_r = 0.000000
+}

@@ -1,0 +1,16 @@
+{
+    "name": "distal_flexor_dominance",
+    "muscles": [
+        "bic_long_r",
+        "bic_brev_r",
+        "brach_r",
+        "flex_carpi_rad_r",
+        "flex_carpi_ulna_r",
+        "pronator_teres_r",
+        "coracobrach_r",
+        "pect_maj_thorax_m_r",
+        "pect_maj_thorax_i_r"
+    ],
+    "condition_description": "Spastic cerebral palsy, chronic post-stroke spasticity",
+    "rationale": "Reflects the classic flexor synergy in upper motor neuron lesions. Elbow flexors, wrist flexors, and pronators are spastically overactive, while extensors are weakened."
+}

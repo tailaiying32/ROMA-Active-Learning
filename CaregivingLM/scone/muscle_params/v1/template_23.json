@@ -1,0 +1,33 @@
+{
+    "name": "template_23",
+    "muscles": [
+        "bic_brev_r",
+        "bic_long_r",
+        "brach_r",
+        "brachiorad_r",
+        "coracobrach_r",
+        "delt_scap_m_r",
+        "delt_scap_p_r",
+        "ext_carpi_rad_brev_r",
+        "ext_carpi_rad_long_r",
+        "flex_carpi_ulna_r",
+        "infraspi_i_r",
+        "lat_dors_i_r",
+        "lev_scap_r",
+        "pect_maj_clav_s_r",
+        "pect_maj_thorax_i_r",
+        "pect_min_r",
+        "pronator_teres_r",
+        "ser_ant_i_r",
+        "subscap_s_r",
+        "supinator_r",
+        "supraspi_r",
+        "trap_clav_s_r",
+        "trap_scap_i_r",
+        "trap_scap_m_r",
+        "trap_scap_s_r",
+        "tri_long_r"
+    ],
+    "condition_description": "Median nerve palsy",
+    "rationale": "Weakness in wrist flexors and thenar muscles, reduced grip strength."
+}

@@ -1,0 +1,32 @@
+{
+    "name": "template_01",
+    "muscles": [
+        "bic_long_r",
+        "brach_r",
+        "brachiorad_r",
+        "coracobrach_r",
+        "delt_clav_a_r",
+        "ext_carpi_rad_long_r",
+        "infraspi_i_r",
+        "infraspi_s_r",
+        "lat_dors_m_r",
+        "lev_scap_r",
+        "pect_maj_clav_s_r",
+        "pect_maj_thorax_i_r",
+        "pect_maj_thorax_m_r",
+        "pronator_teres_r",
+        "ser_ant_i_r",
+        "ser_ant_m_r",
+        "subscap_i_r",
+        "supinator_r",
+        "teres_maj_r",
+        "teres_min_r",
+        "trap_clav_s_r",
+        "trap_scap_i_r",
+        "trap_scap_s_r",
+        "tri_lat_r",
+        "tri_long_r"
+    ],
+    "condition_description": "Stroke (MCA infarct, hemiparesis)",
+    "rationale": "Unilateral weakness often affecting shoulder, elbow, and wrist due to corticospinal tract damage."
+}

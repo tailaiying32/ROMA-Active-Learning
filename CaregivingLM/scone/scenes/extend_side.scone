@@ -1,0 +1,137 @@
+CmaOptimizer {
+	signature = extend_side
+	random_seed = 0
+	
+	min_progress = 1e-5
+	min_improvement_for_file_output = 0.2
+	init { 
+		file = ../par/extend_side.par 
+		std_factor = 20
+	}
+	
+	SimulationObjective {
+		max_duration = 3.0
+		
+		ModelHyfydy {
+			model_file = ../models/HSA13T-2025-06-26.hfd
+			state_init_file = ../init/InitHSA13_bs.zml
+			fixed_control_step_size = 0.005
+			zero_velocity_equilibration = 1
+			
+			model_options {
+				use_legacy_pin_joints = 0
+				joint_rotational_damping = 0.02
+			}
+			
+			Properties {
+				bic_long_r {max_isometric_force.factor = 0.8}
+				
+			}
+		}
+		
+		# Sequential FeedForward Controller
+		SequentialController {
+			transition_intervals = [ 0.5 ]
+			FeedForwardController { name = Relax1 Constant { value = 0.01 } }
+			
+			# FeedForward Controller
+			FeedForwardController {
+				include = "*_r"
+				PieceWiseLinear {
+					control_points = 2
+					control_point_y = 0.015~0.001<0,1>
+					control_point_dt = 0.4~0.01<0.1,1.0>
+					flat_extrapolation = 1
+				}
+			}
+		}
+		
+		# Movement Measure
+		CompositeMeasure {
+			name = DofMovement
+			DofMeasure {
+				weight = 0.1
+				dof = clavicle_protraction_r
+				position { min = -2.0315 max = -2.0315 abs_penalty = 10.0 }
+				velocity { min = -60 max = 60 abs_penalty = 1.0 }
+			}
+			DofMeasure {
+				weight = 0.1
+				dof = clavicle_elevation_r
+				position { min = -11.7543 max = -11.7543 abs_penalty = 10.0 }
+				velocity { min = -60 max = 60 abs_penalty = 1.0 }
+			}
+			DofMeasure {
+				weight = 0.1
+				dof = clavicle_rotation_r
+				position { min = 30.0922 max = 30.0922 abs_penalty = 10.0 }
+				velocity { min = -60 max = 60 abs_penalty = 1.0 }
+			}
+			DofMeasure {
+				weight = 0.1
+				dof = scapula_abduction_r
+				position { min = 1.7910 max = 1.7910 abs_penalty = 10.0 }
+				velocity { min = -60 max = 60 abs_penalty = 1.0 }
+			}
+			DofMeasure {
+				weight = 0.1
+				dof = scapula_elevation_r
+				position { min = -29.1104 max = -29.1104 abs_penalty = 10.0 }
+				velocity { min = -60 max = 60 abs_penalty = 1.0 }
+			}
+			DofMeasure {
+				weight = 0.1
+				dof = scapula_winging_r
+				position { min = 3.1064 max = 3.1064 abs_penalty = 10.0 }
+				velocity { min = -60 max = 60 abs_penalty = 1.0 }
+			}
+			DofMeasure {
+				weight = 0.1
+				dof = shoulder_flexion_r
+				position { min = -2.2871 max = -2.2871 abs_penalty = 10.0 }
+				velocity { min = -60 max = 60 abs_penalty = 1.0 }
+			}
+			DofMeasure {
+				weight = 1
+				dof = shoulder_abduction_r
+				position { min = 100 max = 100 abs_penalty = 10.0 }
+				velocity { min = -60 max = 60 abs_penalty = 1.0}
+			}
+			DofMeasure {
+				weight = 0.1
+				dof = shoulder_rotation_r
+				position { min = -1.0960 max = -1.0960 abs_penalty = 10.0 }
+				velocity { min = -60 max = 60 abs_penalty = 1.0 }
+			}
+			DofMeasure {
+				weight = 1
+				dof = elbow_flexion_r
+				position { min = 8.9665 max = 8.9665 abs_penalty = 10.0 }
+				velocity { min = -60 max = 60 abs_penalty = 1.0}
+			}
+			DofMeasure {
+				weight = 0.1
+				dof = forearm_pronation_r
+				position { min = 0.3911 max = 0.3911 abs_penalty = 10.0 }
+				velocity { min = -60 max = 60 abs_penalty = 1.0 }
+			}
+			DofMeasure {
+				weight = 0.1
+				dof = wrist_flexion_r
+				position { min = 4.5968 max = 4.5968 abs_penalty = 10.0 }
+				velocity { min = -60 max = 60 abs_penalty = 10.0 }
+			}
+			DofMeasure {
+				weight = 0.1
+				dof = radial_deviation_r
+				position { min = 5.0427 max = 5.0427 abs_penalty = 10.0 }
+				velocity { min = -60 max = 60 abs_penalty = 10.0 }
+			}
+			
+			EffortMeasure {
+				weight = 1
+				measure_type = SquaredMuscleActivation
+			}
+		}
+	}
+}

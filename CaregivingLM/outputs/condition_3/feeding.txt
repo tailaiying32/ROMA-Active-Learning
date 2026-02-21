@@ -1,0 +1,47 @@
+{
+  "robot_adaptation_guidelines": {
+    "movement_speed": "Very slow (2-5 cm/s), especially during utensil to mouth trajectory to allow for adjustment to involuntary movements or spastic responses.",
+    "movement_trajectory": "Plan smooth, linear trajectories that minimize the need for shoulder abduction and avoid positions that could increase spasticity. Incorporate pauses for rest and adjustment.",
+    "max_force_applied": {
+      "arm_support": "Up to 3N, gently assisting in elevation to avoid triggering spasticity",
+      "spoon_support": "Force just sufficient to maintain grasp on the spoon or to stabilize it against unintentional release (< 2N)"
+    },
+    "joint_angle_constraints": {
+      "shoulder_flexion_max": "Maintain within user's known active range (0-10°), assist passively to reach up to 30° for feeding action within a safe limit.",
+      "elbow_flexion_max": "Support elbow in a slightly flexed position (comfortably achievable range for the user), avoiding forced extension."
+    },
+    "grasp_assistance": {
+      "support_strategy": "Use adaptive grip attachment on utensil that requires minimal active grasp, supporting passive holding or attachment to the hand.",
+      "force": "Minimal to no force required by user; robotic system to compensate entirely."
+    },
+    "sequence_of_actions": [
+      "Robot to gently lift spoon, pausing for user's readiness",
+      "Move spoon towards food, stabilizing against bowl edge if necessary",
+      "Slowly transport spoon to mouth, allowing time for oral motor preparation",
+      "Monitor for user's completion of bite before withdrawing spoon",
+      "Repeat process with adjustments based on user feedback or visible discomfort"
+    ],
+    "postural_support": {
+      "monitoring": "Assess stability and trunk control continuously, adjust robotic assistance accordingly",
+      "response": "If instability detected, provide verbal cueing or pause task to adjust user's posture or the robotic system for better support."
+    },
+    "communication_prompts": [
+      "Now I will help you take a bite, let's move slowly towards the food.",
+      "I'm moving the spoon to your mouth. Please open your mouth when you're ready.",
+      "You did a great job with that bite. Let's prepare for the next one."
+    ],
+    "safety_notes": [
+      "Ensure spoon trajectory accounts for tremors or involuntary movements to avoid injury.",
+      "Continuously monitor for signs of distress or spasticity, pausing the task to adjust as needed."
+    ],
+    "personalization_notes": [
+      "Given the user's severe limitation in voluntary movement, robot-assisted spoon transport to be done with utmost care for involuntary muscle contractions.",
+      "Head and eye movement tracking could supplement control if the user is capable, providing a sense of autonomy in task participation.",
+      "Implement verbal encouragement and clear, step-by-step communication to enhance user engagement and compensation for apraxia."
+    ]
+  },
+  "source_citations": [
+    "Quick Reference to Occupational Therapy (Clinical Observations)",
+    "Modification of the Toronto Rehabilitation Institute—Hand Function Test for integration into robot-assisted therapy (data/corpus/10.1186_s12938-025-01384-7.pdf)"
+  ]
+}

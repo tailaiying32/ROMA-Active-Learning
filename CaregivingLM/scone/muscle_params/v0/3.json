@@ -1,0 +1,16 @@
+{
+    "name": "proximal_flexor_and_scapular_instability",
+    "muscles": [
+        "lat_dors_m_r",
+        "lat_dors_i_r",
+        "pect_maj_clav_s_r",
+        "pect_min_r",
+        "trap_scap_m_r",
+        "ser_ant_i_r",
+        "ser_ant_m_r",
+        "rhom_s_r",
+        "rhom_i_r"
+    ],
+    "condition_description": "Cerebral palsy (hypotonic or mixed type), neuromuscular disorders",
+    "rationale": "Reflects impaired proximal postural control and weak scapulothoracic muscles. Often seen in CP with poor trunk control and motor coordination issues."
+}

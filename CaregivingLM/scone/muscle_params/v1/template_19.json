@@ -1,0 +1,33 @@
+{
+    "name": "template_19",
+    "muscles": [
+        "bic_long_r",
+        "coracobrach_r",
+        "delt_scap_m_r",
+        "delt_scap_p_r",
+        "ext_carpi_rad_brev_r",
+        "ext_carpi_ulna_r",
+        "flex_carpi_rad_r",
+        "infraspi_i_r",
+        "infraspi_s_r",
+        "lev_scap_r",
+        "pect_maj_clav_s_r",
+        "pect_maj_thorax_i_r",
+        "pect_maj_thorax_m_r",
+        "pect_min_r",
+        "pronator_teres_r",
+        "rhom_s_r",
+        "ser_ant_m_r",
+        "subscap_i_r",
+        "subscap_s_r",
+        "supraspi_r",
+        "teres_maj_r",
+        "teres_min_r",
+        "trap_clav_s_r",
+        "trap_scap_i_r",
+        "trap_scap_s_r",
+        "tri_long_r"
+    ],
+    "condition_description": "Erb\u2019s palsy",
+    "rationale": "Paralysis of C5-C6 innervated muscles (deltoid, biceps, brachialis, supraspinatus)."
+}

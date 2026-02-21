@@ -1,0 +1,56 @@
+Query: Generate robot adaptation guidelines for dressing task
+Prompt Type: robot
+Timestamp: 2025-07-11T00:20:25.801282
+--------------------------------------------------------------------------------
+Response:
+```json
+{
+  "robot_adaption_guidelines": {
+    "movement_speed": "Controlled, slow (2-5 cm/s) to accommodate compromised motor control and prevent startle response in user.",
+    "movement_trajectory": "Plan movements to stay within user's comfortable range, avoiding overhead and rapid lateral movements. Focus on linear or slightly curved paths optimal for limited shoulder mobility.",
+    "max_force_applied": {
+      "upper_body_dressing": "≤ 5 N, to ensure safety and comfort when manipulating clothing around the affected limbs.",
+      "support_assistance": "≤ 8 N for postural adjustment or when offering trunk support during seated dressing."
+    },
+    "joint_angle_constraints": {
+      "shoulder_flexion": "Do not exceed 90° to prevent discomfort or injury.",
+      "elbow_extension": "Limit actively assisted extension to 30° to avoid overstretching or exacerbating spasticity."
+    },
+    "grasp_assistance": {
+      "support_strategy": "Provide stabilizing support for clothing items, ensuring they are held open and steady for easy access by the user's unaffected side.",
+      "force": "Generate minimal force (≤ 2 N) on clothing items to prevent snagging or tearing and ensure user comfort."
+    },
+    "sequence_of_actions": [
+      "Secure base of garment and guide user's unaffected (right) arm through the sleeve first.",
+      "Stabilize garment to allow the user to insert affected (left) arm with minimum resistance.",
+      "Support or slightly elevate garment for easier access without requiring overhead reach.",
+      "Monitor and adjust movement to accommodate for any visible discomfort or motor control issues during the process.",
+      "Ensure final position of garment is comfortable for user, making any necessary adjustments."
+    ],
+    "postural_support": {
+      "monitoring": "Continuously evaluate user's trunk stability and adjust support as necessary to maintain balance.",
+      "response": "Provide gentle, controlled assistance to the trunk to facilitate upright posture and stability during dressing, responding dynamically to changes in user posture."
+    },
+    "communication_prompts": [
+      "Initiate each step with clear, concise instructions, e.g., 'Let’s start with your right sleeve.'",
+      "Provide positive feedback and encouragement throughout the process.",
+      "Alert user before making any adjustments, e.g., 'I’m going to help lift the shirt now.'"
+    ],
+    "safety_notes": [
+      "Constant monitoring for signs of discomfort or distress, adapting assistance as needed.",
+      "Immediate withdrawal of assistance if user expresses pain or discomfort.",
+      "Ensure all movements are within the natural ROM to prevent injury."
+    ],
+    "personalization_notes": [
+      "Adaptations and movement speeds adjusted based on user feedback and comfort.",
+      "Utilize adaptive clothing (Velcro closures) to simplify the task and increase independence.",
+      "Frequent reassessments to refine the approach as the user's condition evolves."
+    ]
+  },
+  "source_citations": [
+    "Clinical Guidelines for Stroke Rehabilitation (AHA, 2022)",
+    "Occupational Therapy Toolkit: Dressing Techniques and Adaptations",
+    "Modification of the Toronto Rehabilitation Institute—Hand Function Test for Integration into Robot-Assisted Therapy"
+  ]
+}
+```

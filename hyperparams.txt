@@ -1,0 +1,35 @@
+bald_tau 0.8745491880492344
+
+bald_sampling_temperature 1.6469435923102287
+
+bald_n_mc_samples 36
+
+bald_n_restarts 5
+
+bald_n_iters_per_restart 85
+
+bald_lr_adam 0.09287905911805719
+
+bald_lr_sgd 0.0014676518160211393
+
+bald_switch_to_sgd_at 0.770679329143381
+
+bald_plateau_patience 1
+
+bald_plateau_threshold 0.00037179217824595247
+
+vi_n_mc_samples 73
+
+vi_lr 0.005415787538649346
+
+vi_optimizer_type adam
+
+vi_max_iters 9
+
+vi_convergence_tol 0.00034456943193745626
+
+vi_patience 5
+
+vi_kl_weight 1.86452507412445
+
+vi_grad_clip 3.0

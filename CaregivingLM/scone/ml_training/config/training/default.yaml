@@ -1,0 +1,36 @@
+# @package training
+
+# Training parameters
+epochs: 1000
+learning_rate: 5e-3
+weight_decay: 0.0001
+gradient_clip_norm: 1.0
+
+# Loss function
+loss_type: "mse"  # mse, mae, huber
+
+# Optimizer
+optimizer: "adam"  # adam, sgd, adamw
+scheduler: "reduce_on_plateau"  # reduce_on_plateau, cosine, step
+
+# Early stopping
+early_stopping:
+  patience: 1000
+  min_delta: 1e-6
+  monitor: "val_loss"
+
+# Checkpointing
+save_best_model: true
+save_last_model: true
+checkpoint_every_n_epochs: 10
+
+# Validation
+validate_every_n_epochs: 1
+
+# Device
+device: "cuda"  # cuda, cpu, auto
+
+# Debug mode
+debug_mode: false
+skip_validation: false  # Skip validation during training (for overfitting experiments)
+skip_testing: false     # Skip final test evaluation

@@ -1,0 +1,7 @@
+tri_long_r {max_isometric_force.factor = 0.1}
+tri_lat_r {max_isometric_force.factor = 0.1}
+ext_carpi_rad_long_r {max_isometric_force.factor = 0.1}
+ext_carpi_rad_brev_r {max_isometric_force.factor = 0.1}
+ext_carpi_ulna_r {max_isometric_force.factor = 0.1}
+supinator_r {max_isometric_force.factor = 0.1}
+brachiorad_r {max_isometric_force.factor = 0.1}

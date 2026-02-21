@@ -1,0 +1,32 @@
+{
+  "model": {
+    "file": "models/HSA13T_hfd_joint.scone",
+    "target_dofs": [
+      "shoulder_flexion_r",
+      "shoulder_abduction_r",
+      "shoulder_rotation_r",
+      "elbow_flexion_r"
+    ]
+  },
+  "actuator_limits": {
+    "shoulder_flexion_r": [-30.0, 60.0],
+    "shoulder_abduction_r": [-50.0, 50.0],
+    "shoulder_rotation_r": [-5.0, 5.0],
+    "elbow_flexion_r": [-5.0, 5.0]
+  },
+  "sampling": {
+    "halton_samples": 500,
+    "boundary_mode": "corners_plus_midpoints",
+    "transition_time": 0.1,
+    "hold_time": 0.5
+  },
+  "simulation": {
+    "settle_time": 1.0,
+    "dt": 0.01,
+    "store_data": true
+  },
+  "output": {
+    "directory": "reachability_data",
+    "filename_prefix": "reachability_hybrid"
+  }
+}

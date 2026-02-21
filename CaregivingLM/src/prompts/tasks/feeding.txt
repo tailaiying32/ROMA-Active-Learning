@@ -1,0 +1,26 @@
+# Feeding Task Analysis
+
+## Functional Abilities Required
+- Shoulder and elbow ROM (flexion, abduction, supination)
+- Hand grasp and release (palmar or lateral pinch)
+- Oral-motor coordination (if self-spooning to mouth)
+- Trunk stability (seated posture)
+- Coordination for utensil handling
+
+## User Limitations That Matter Most
+- Limited active elbow flexion or supination
+- Poor grip strength or finger extension
+- Involuntary movements (e.g., tremors, spasticity)
+- Inattention or cognitive sequencing deficits
+
+## Variation in Assistance Strategies
+- **Mild impairment**: Adaptive utensils (angled spoon, built-up handle), plate guards
+- **Moderate impairment**: Mobile arm support, universal cuff, bowl stabilization
+- **Severe impairment**: Hand-over-hand assistance, robot-assisted spoon transport, feeding from a pre-positioned spoon
+
+## Robot Adaptation Considerations
+- Movement speed should be very slow and precise for utensil manipulation
+- Trajectory planning should account for tremors and involuntary movements
+- Grasp assistance should provide gentle support without taking over the task
+- Postural support is critical for maintaining upright seated position
+- Communication should be encouraging and provide clear instructions for each step

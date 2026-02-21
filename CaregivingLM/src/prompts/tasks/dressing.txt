@@ -1,0 +1,26 @@
+# Dressing Task Analysis
+
+## Functional Abilities Required
+- Shoulder ROM (flexion, abduction, ER) for upper-body dressing
+- Hip/knee ROM and reach for lower-body dressing
+- Bimanual coordination (managing fabric, donning sleeves/pants)
+- Hand strength and precision (buttoning, zipping)
+- Trunk control and sequencing
+
+## User Limitations That Matter Most
+- Limited reach (ROM or weakness)
+- Hemiparesis or one-hand use
+- Fine motor limitations (buttons, zippers)
+- Poor sitting/standing balance
+
+## Variation in Assistance Strategies
+- **Mild impairment**: Dressing aids (button hooks, reachers)
+- **Moderate impairment**: Adaptive clothing (Velcro closures), dressing in seated position
+- **Severe impairment**: Stepwise physical assistance, side-lying dressing techniques
+
+## Robot Adaptation Considerations
+- Movement speed should be slow and controlled when assisting with affected limbs
+- Trajectory planning should avoid overhead reach for users with limited shoulder flexion
+- Grasp assistance should focus on stabilizing clothing rather than pulling limbs
+- Postural support may be needed for users with poor trunk control
+- Communication should guide users through the dressing sequence step-by-step

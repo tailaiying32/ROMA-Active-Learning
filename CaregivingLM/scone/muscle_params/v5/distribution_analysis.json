@@ -1,0 +1,12 @@
+{
+  "total_parameters": 9432,
+  "severe_count": 1366,
+  "moderate_count": 2606,
+  "mild_count": 5303,
+  "normal_count": 157,
+  "severe_percentage": 14.482612383375743,
+  "moderate_percentage": 27.629346904156066,
+  "mild_percentage": 56.22349448685326,
+  "normal_percentage": 1.664546225614928,
+  "population_target": "severe_mobility"
+}

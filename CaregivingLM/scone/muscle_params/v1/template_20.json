@@ -1,0 +1,23 @@
+{
+    "name": "template_20",
+    "muscles": [
+        "bic_brev_r",
+        "ext_carpi_rad_brev_r",
+        "ext_carpi_rad_long_r",
+        "flex_carpi_rad_r",
+        "flex_carpi_ulna_r",
+        "lat_dors_i_r",
+        "lat_dors_m_r",
+        "lev_scap_r",
+        "pect_maj_thorax_i_r",
+        "ser_ant_s_r",
+        "supraspi_r",
+        "teres_min_r",
+        "trap_scap_m_r",
+        "trap_scap_s_r",
+        "tri_lat_r",
+        "tri_long_r"
+    ],
+    "condition_description": "Cervical radiculopathy (C6\u2013C7)",
+    "rationale": "Weakness in biceps, wrist extensors, and triceps depending on root affected."
+}

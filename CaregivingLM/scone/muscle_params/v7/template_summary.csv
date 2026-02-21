@@ -1,0 +1,237 @@
+template_id,tier,type,target_groups,target_group,pattern_name,severity,description,valid
+template_001,2,pairwise_combination,scapular+small_shoulder,,,severe+normal,"scapular severe, small_shoulder normal",True
+template_002,2,pairwise_combination,large_movers+elbow,,,severe+moderate,"large_movers severe, elbow moderate",True
+template_003,1,single_group_severe,,elbow,,severe,elbow severe weakness,True
+template_004,2,pairwise_combination,rotator_cuff+wrist,,,severe+severe,"rotator_cuff severe, wrist severe",True
+template_005,1,single_group_severe,,rotator_cuff,,severe,rotator_cuff severe weakness,True
+template_006,4,edge_case,,,compensation_scapular_for_deltoid,variable,Edge case: compensation_scapular_for_deltoid,False
+template_007,1,single_group_mixed,,wrist,,mixed,wrist mixed severity weakness,True
+template_008,3,clinical_syndrome,,,sci_c5_complete,variable,Clinical pattern: sci_c5_complete,True
+template_009,1,single_group_mixed,,forearm,,mixed,forearm mixed severity weakness,True
+template_010,1,single_group_severe,,wrist,,severe,wrist severe weakness,True
+template_011,2,pairwise_combination,forearm+wrist,,,severe+moderate,"forearm severe, wrist moderate",True
+template_012,2,pairwise_combination,large_movers+wrist,,,moderate+moderate,"large_movers moderate, wrist moderate",True
+template_013,4,three_group_combination,large_movers+small_shoulder+elbow,,,moderate+normal+severe,"Three-group: large_movers moderate, small_shoulder normal, elbow severe",True
+template_014,2,pairwise_combination,elbow+wrist,,,moderate+moderate,"elbow moderate, wrist moderate",True
+template_015,4,three_group_combination,deltoid+large_movers+elbow,,,moderate+severe+normal,"Three-group: deltoid moderate, large_movers severe, elbow normal",True
+template_016,4,edge_case,,,single_muscle_deltoid_anterior,variable,Edge case: single_muscle_deltoid_anterior,True
+template_017,1,single_group_severe,,wrist,,severe,wrist severe weakness,True
+template_018,2,pairwise_combination,deltoid+elbow,,,severe+severe,"deltoid severe, elbow severe",True
+template_019,3,clinical_syndrome,,,suprascapular_nerve,variable,Clinical pattern: suprascapular_nerve,True
+template_020,1,single_group_severe,,small_shoulder,,severe,small_shoulder severe weakness,True
+template_021,1,single_group_mixed,,scapular,,mixed,scapular mixed severity weakness,True
+template_022,1,single_group_severe,,small_shoulder,,severe,small_shoulder severe weakness,True
+template_023,3,clinical_syndrome,,,sci_c6_incomplete,variable,Clinical pattern: sci_c6_incomplete,True
+template_024,1,single_group_severe,,large_movers,,severe,large_movers severe weakness,True
+template_025,2,pairwise_combination,rotator_cuff+large_movers,,,moderate+moderate,"rotator_cuff moderate, large_movers moderate",True
+template_026,4,three_group_combination,large_movers+forearm+wrist,,,moderate+severe+normal,"Three-group: large_movers moderate, forearm severe, wrist normal",True
+template_027,2,pairwise_combination,scapular+elbow,,,moderate+moderate,"scapular moderate, elbow moderate",True
+template_028,1,single_group_mixed,,rotator_cuff,,mixed,rotator_cuff mixed severity weakness,True
+template_029,2,pairwise_combination,rotator_cuff+small_shoulder,,,severe+normal,"rotator_cuff severe, small_shoulder normal",True
+template_030,2,pairwise_combination,scapular+deltoid,,,severe+moderate,"scapular severe, deltoid moderate",True
+template_031,1,single_group_mixed,,large_movers,,mixed,large_movers mixed severity weakness,True
+template_032,1,single_group_mixed,,large_movers,,mixed,large_movers mixed severity weakness,True
+template_033,1,single_group_moderate,,rotator_cuff,,moderate,rotator_cuff moderate weakness,True
+template_034,2,pairwise_combination,scapular+forearm,,,severe+severe,"scapular severe, forearm severe",True
+template_035,4,three_group_combination,scapular+deltoid+large_movers,,,moderate+normal+severe,"Three-group: scapular moderate, deltoid normal, large_movers severe",True
+template_036,1,single_group_moderate,,deltoid,,moderate,deltoid moderate weakness,True
+template_037,1,single_group_moderate,,wrist,,moderate,wrist moderate weakness,True
+template_038,4,three_group_combination,elbow+forearm+wrist,,,moderate+severe+normal,"Three-group: elbow moderate, forearm severe, wrist normal",True
+template_039,1,single_group_mixed,,large_movers,,mixed,large_movers mixed severity weakness,True
+template_040,3,clinical_syndrome,,,brachial_plexus_upper,variable,Clinical pattern: brachial_plexus_upper,True
+template_041,2,pairwise_combination,deltoid+forearm,,,moderate+moderate,"deltoid moderate, forearm moderate",True
+template_042,1,single_group_severe,,wrist,,severe,wrist severe weakness,True
+template_043,3,clinical_syndrome,,,frozen_shoulder_early,variable,Clinical pattern: frozen_shoulder_early,True
+template_044,1,single_group_moderate,,elbow,,moderate,elbow moderate weakness,True
+template_045,2,pairwise_combination,deltoid+wrist,,,moderate+moderate,"deltoid moderate, wrist moderate",True
+template_046,1,single_group_severe,,scapular,,severe,scapular severe weakness,True
+template_047,4,global_pattern,large_movers+deltoid,,power_weakness,variable,Global pattern: power_weakness,True
+template_048,1,single_group_severe,,deltoid,,severe,deltoid severe weakness,True
+template_049,2,pairwise_combination,deltoid+forearm,,,severe+moderate,"deltoid severe, forearm moderate",True
+template_050,1,single_group_moderate,,deltoid,,moderate,deltoid moderate weakness,True
+template_051,2,pairwise_combination,rotator_cuff+large_movers,,,severe+moderate,"rotator_cuff severe, large_movers moderate",True
+template_052,2,pairwise_combination,scapular+small_shoulder,,,moderate+moderate,"scapular moderate, small_shoulder moderate",True
+template_053,1,single_group_severe,,forearm,,severe,forearm severe weakness,False
+template_054,1,single_group_moderate,,scapular,,moderate,scapular moderate weakness,True
+template_055,2,pairwise_combination,elbow+forearm,,,moderate+moderate,"elbow moderate, forearm moderate",True
+template_056,1,single_group_severe,,forearm,,severe,forearm severe weakness,True
+template_057,3,clinical_syndrome,,,cp_hypotonic_mild,moderate,Clinical pattern: cp_hypotonic_mild,True
+template_058,4,global_pattern,scapular+elbow+wrist,,mixed_pattern,variable,Global pattern: mixed_pattern,True
+template_059,3,clinical_syndrome,,,sci_c6_complete,variable,Clinical pattern: sci_c6_complete,True
+template_060,2,pairwise_combination,small_shoulder+elbow,,,severe+severe,"small_shoulder severe, elbow severe",True
+template_061,2,pairwise_combination,scapular+rotator_cuff,,,severe+moderate,"scapular severe, rotator_cuff moderate",True
+template_062,2,pairwise_combination,scapular+forearm,,,severe+moderate,"scapular severe, forearm moderate",True
+template_063,4,three_group_combination,scapular+rotator_cuff+deltoid,,,severe+moderate+normal,"Three-group: scapular severe, rotator_cuff moderate, deltoid normal",True
+template_064,3,clinical_syndrome,,,radial_nerve,variable,Clinical pattern: radial_nerve,True
+template_065,1,single_group_moderate,,wrist,,moderate,wrist moderate weakness,True
+template_066,2,pairwise_combination,small_shoulder+forearm,,,severe+moderate,"small_shoulder severe, forearm moderate",True
+template_067,2,pairwise_combination,large_movers+elbow,,,severe+severe,"large_movers severe, elbow severe",True
+template_068,1,single_group_mixed,,scapular,,mixed,scapular mixed severity weakness,True
+template_069,1,single_group_moderate,,small_shoulder,,moderate,small_shoulder moderate weakness,True
+template_070,3,clinical_syndrome,,,brachial_plexus_lower,variable,Clinical pattern: brachial_plexus_lower,True
+template_071,2,pairwise_combination,scapular+small_shoulder,,,severe+moderate,"scapular severe, small_shoulder moderate",True
+template_072,2,pairwise_combination,small_shoulder+wrist,,,severe+moderate,"small_shoulder severe, wrist moderate",True
+template_073,1,single_group_mixed,,deltoid,,mixed,deltoid mixed severity weakness,True
+template_074,1,single_group_moderate,,wrist,,moderate,wrist moderate weakness,True
+template_075,2,pairwise_combination,deltoid+small_shoulder,,,severe+moderate,"deltoid severe, small_shoulder moderate",True
+template_076,3,clinical_syndrome,,,frozen_shoulder_peak,variable,Clinical pattern: frozen_shoulder_peak,True
+template_077,3,clinical_syndrome,,,subscapularis_tear,variable,Clinical pattern: subscapularis_tear,False
+template_078,1,single_group_moderate,,forearm,,moderate,forearm moderate weakness,True
+template_079,1,single_group_severe,,small_shoulder,,severe,small_shoulder severe weakness,True
+template_080,2,pairwise_combination,scapular+large_movers,,,severe+moderate,"scapular severe, large_movers moderate",True
+template_081,2,pairwise_combination,deltoid+large_movers,,,severe+moderate,"deltoid severe, large_movers moderate",True
+template_082,2,pairwise_combination,scapular+elbow,,,severe+severe,"scapular severe, elbow severe",True
+template_083,1,single_group_moderate,,rotator_cuff,,moderate,rotator_cuff moderate weakness,True
+template_084,2,pairwise_combination,rotator_cuff+wrist,,,severe+moderate,"rotator_cuff severe, wrist moderate",True
+template_085,2,pairwise_combination,large_movers+elbow,,,severe+normal,"large_movers severe, elbow normal",True
+template_086,3,clinical_syndrome,,,sci_c7_incomplete,variable,Clinical pattern: sci_c7_incomplete,True
+template_087,1,single_group_severe,,rotator_cuff,,severe,rotator_cuff severe weakness,True
+template_088,1,single_group_severe,,large_movers,,severe,large_movers severe weakness,True
+template_089,3,clinical_syndrome,,,cp_hypotonic_severe,severe,Clinical pattern: cp_hypotonic_severe,True
+template_090,1,single_group_mixed,,rotator_cuff,,mixed,rotator_cuff mixed severity weakness,True
+template_091,2,pairwise_combination,forearm+wrist,,,severe+severe,"forearm severe, wrist severe",True
+template_092,2,pairwise_combination,scapular+wrist,,,severe+severe,"scapular severe, wrist severe",True
+template_093,2,pairwise_combination,rotator_cuff+elbow,,,severe+severe,"rotator_cuff severe, elbow severe",False
+template_094,1,single_group_moderate,,large_movers,,moderate,large_movers moderate weakness,True
+template_095,1,single_group_mixed,,wrist,,mixed,wrist mixed severity weakness,True
+template_096,2,pairwise_combination,scapular+elbow,,,severe+moderate,"scapular severe, elbow moderate",True
+template_097,3,clinical_syndrome,,,rotator_cuff_isolated,variable,Clinical pattern: rotator_cuff_isolated,False
+template_098,2,pairwise_combination,forearm+wrist,,,moderate+moderate,"forearm moderate, wrist moderate",True
+template_099,1,single_group_severe,,rotator_cuff,,severe,rotator_cuff severe weakness,True
+template_100,2,pairwise_combination,scapular+rotator_cuff,,,severe+severe,"scapular severe, rotator_cuff severe",True
+template_101,2,pairwise_combination,deltoid+elbow,,,severe+moderate,"deltoid severe, elbow moderate",True
+template_102,2,pairwise_combination,elbow+forearm,,,severe+moderate,"elbow severe, forearm moderate",True
+template_103,1,single_group_severe,,large_movers,,severe,large_movers severe weakness,True
+template_104,2,pairwise_combination,deltoid+elbow,,,moderate+moderate,"deltoid moderate, elbow moderate",True
+template_105,1,single_group_severe,,scapular,,severe,scapular severe weakness,True
+template_106,1,single_group_severe,,elbow,,severe,elbow severe weakness,False
+template_107,1,single_group_severe,,deltoid,,severe,deltoid severe weakness,True
+template_108,2,pairwise_combination,rotator_cuff+small_shoulder,,,severe+severe,"rotator_cuff severe, small_shoulder severe",True
+template_109,1,single_group_severe,,wrist,,severe,wrist severe weakness,True
+template_110,1,single_group_mixed,,deltoid,,mixed,deltoid mixed severity weakness,True
+template_111,3,clinical_syndrome,,,rotator_cuff_massive,variable,Clinical pattern: rotator_cuff_massive,False
+template_112,4,global_pattern,scapular+rotator_cuff+deltoid,,proximal_weakness,variable,Global pattern: proximal_weakness,True
+template_113,1,single_group_moderate,,scapular,,moderate,scapular moderate weakness,True
+template_114,1,single_group_mixed,,elbow,,mixed,elbow mixed severity weakness,True
+template_115,3,clinical_syndrome,,,cp_spastic_severe,severe,Clinical pattern: cp_spastic_severe,False
+template_116,2,pairwise_combination,rotator_cuff+small_shoulder,,,severe+moderate,"rotator_cuff severe, small_shoulder moderate",True
+template_117,2,pairwise_combination,small_shoulder+elbow,,,severe+moderate,"small_shoulder severe, elbow moderate",True
+template_118,3,clinical_syndrome,,,sci_c8_complete,variable,Clinical pattern: sci_c8_complete,True
+template_119,4,three_group_combination,deltoid+elbow+forearm,,,severe+normal+moderate,"Three-group: deltoid severe, elbow normal, forearm moderate",True
+template_120,2,pairwise_combination,deltoid+wrist,,,severe+severe,"deltoid severe, wrist severe",True
+template_121,2,pairwise_combination,small_shoulder+forearm,,,severe+severe,"small_shoulder severe, forearm severe",True
+template_122,2,pairwise_combination,scapular+deltoid,,,severe+normal,"scapular severe, deltoid normal",True
+template_123,2,pairwise_combination,elbow+wrist,,,severe+severe,"elbow severe, wrist severe",True
+template_124,2,pairwise_combination,rotator_cuff+deltoid,,,severe+moderate,"rotator_cuff severe, deltoid moderate",True
+template_125,2,pairwise_combination,scapular+forearm,,,severe+normal,"scapular severe, forearm normal",True
+template_126,1,single_group_moderate,,small_shoulder,,moderate,small_shoulder moderate weakness,True
+template_127,1,single_group_mixed,,elbow,,mixed,elbow mixed severity weakness,True
+template_128,2,pairwise_combination,deltoid+wrist,,,severe+normal,"deltoid severe, wrist normal",True
+template_129,2,pairwise_combination,large_movers+forearm,,,severe+moderate,"large_movers severe, forearm moderate",True
+template_130,1,single_group_mixed,,scapular,,mixed,scapular mixed severity weakness,True
+template_131,2,pairwise_combination,forearm+wrist,,,severe+normal,"forearm severe, wrist normal",True
+template_132,3,clinical_syndrome,,,stroke_extensor_severe,severe,Clinical pattern: stroke_extensor_severe,False
+template_133,2,pairwise_combination,large_movers+forearm,,,severe+severe,"large_movers severe, forearm severe",True
+template_134,2,pairwise_combination,rotator_cuff+elbow,,,moderate+moderate,"rotator_cuff moderate, elbow moderate",True
+template_135,4,three_group_combination,rotator_cuff+small_shoulder+forearm,,,severe+normal+moderate,"Three-group: rotator_cuff severe, small_shoulder normal, forearm moderate",True
+template_136,2,pairwise_combination,deltoid+small_shoulder,,,severe+severe,"deltoid severe, small_shoulder severe",True
+template_137,2,pairwise_combination,rotator_cuff+elbow,,,severe+moderate,"rotator_cuff severe, elbow moderate",True
+template_138,1,single_group_moderate,,elbow,,moderate,elbow moderate weakness,True
+template_139,2,pairwise_combination,deltoid+large_movers,,,severe+normal,"deltoid severe, large_movers normal",True
+template_140,4,three_group_combination,scapular+elbow+wrist,,,moderate+severe+normal,"Three-group: scapular moderate, elbow severe, wrist normal",True
+template_141,3,clinical_syndrome,,,musculocutaneous_nerve,variable,Clinical pattern: musculocutaneous_nerve,True
+template_142,2,pairwise_combination,rotator_cuff+wrist,,,moderate+moderate,"rotator_cuff moderate, wrist moderate",True
+template_143,2,pairwise_combination,rotator_cuff+deltoid,,,moderate+moderate,"rotator_cuff moderate, deltoid moderate",True
+template_144,1,single_group_severe,,scapular,,severe,scapular severe weakness,True
+template_145,2,pairwise_combination,deltoid+large_movers,,,moderate+moderate,"deltoid moderate, large_movers moderate",True
+template_146,1,single_group_mixed,,rotator_cuff,,mixed,rotator_cuff mixed severity weakness,True
+template_147,2,pairwise_combination,scapular+large_movers,,,moderate+moderate,"scapular moderate, large_movers moderate",True
+template_148,2,pairwise_combination,scapular+small_shoulder,,,severe+severe,"scapular severe, small_shoulder severe",True
+template_149,2,pairwise_combination,small_shoulder+wrist,,,severe+severe,"small_shoulder severe, wrist severe",True
+template_150,3,clinical_syndrome,,,stroke_extensor_mild,moderate,Clinical pattern: stroke_extensor_mild,False
+template_151,1,single_group_moderate,,forearm,,moderate,forearm moderate weakness,True
+template_152,2,pairwise_combination,rotator_cuff+forearm,,,moderate+moderate,"rotator_cuff moderate, forearm moderate",True
+template_153,2,pairwise_combination,rotator_cuff+small_shoulder,,,moderate+moderate,"rotator_cuff moderate, small_shoulder moderate",True
+template_154,2,pairwise_combination,scapular+wrist,,,moderate+moderate,"scapular moderate, wrist moderate",True
+template_155,1,single_group_mixed,,small_shoulder,,mixed,small_shoulder mixed severity weakness,True
+template_156,2,pairwise_combination,large_movers+wrist,,,severe+severe,"large_movers severe, wrist severe",True
+template_157,2,pairwise_combination,large_movers+wrist,,,severe+normal,"large_movers severe, wrist normal",True
+template_158,3,clinical_syndrome,,,axillary_nerve,variable,Clinical pattern: axillary_nerve,True
+template_159,2,pairwise_combination,scapular+large_movers,,,severe+severe,"scapular severe, large_movers severe",True
+template_160,1,single_group_mixed,,forearm,,mixed,forearm mixed severity weakness,True
+template_161,2,pairwise_combination,large_movers+forearm,,,moderate+moderate,"large_movers moderate, forearm moderate",True
+template_162,2,pairwise_combination,deltoid+elbow,,,severe+normal,"deltoid severe, elbow normal",False
+template_163,1,single_group_mixed,,forearm,,mixed,forearm mixed severity weakness,True
+template_164,1,single_group_moderate,,large_movers,,moderate,large_movers moderate weakness,True
+template_165,1,single_group_severe,,elbow,,severe,elbow severe weakness,True
+template_166,3,clinical_syndrome,,,parkinsons_severe,severe,Clinical pattern: parkinsons_severe,False
+template_167,2,pairwise_combination,large_movers+wrist,,,severe+moderate,"large_movers severe, wrist moderate",False
+template_168,3,clinical_syndrome,,,cp_spastic_mild,moderate,Clinical pattern: cp_spastic_mild,False
+template_169,3,clinical_syndrome,,,sci_c7_complete,variable,Clinical pattern: sci_c7_complete,False
+template_170,2,pairwise_combination,deltoid+large_movers,,,severe+severe,"deltoid severe, large_movers severe",False
+template_171,2,pairwise_combination,elbow+forearm,,,severe+normal,"elbow severe, forearm normal",True
+template_172,4,three_group_combination,scapular+rotator_cuff+large_movers,,,severe+normal+moderate,"Three-group: scapular severe, rotator_cuff normal, large_movers moderate",True
+template_173,2,pairwise_combination,rotator_cuff+forearm,,,severe+moderate,"rotator_cuff severe, forearm moderate",True
+template_174,1,single_group_severe,,rotator_cuff,,severe,rotator_cuff severe weakness,True
+template_175,2,pairwise_combination,rotator_cuff+deltoid,,,severe+severe,"rotator_cuff severe, deltoid severe",True
+template_176,4,global_pattern,forearm+wrist,,fine_motor_weakness,variable,Global pattern: fine_motor_weakness,True
+template_177,1,single_group_mixed,,wrist,,mixed,wrist mixed severity weakness,True
+template_178,3,clinical_syndrome,,,stroke_flexor_severe,severe,Clinical pattern: stroke_flexor_severe,False
+template_179,2,pairwise_combination,scapular+deltoid,,,severe+severe,"scapular severe, deltoid severe",True
+template_180,1,single_group_mixed,,small_shoulder,,mixed,small_shoulder mixed severity weakness,True
+template_181,3,clinical_syndrome,,,frozen_shoulder_recovery,variable,Clinical pattern: frozen_shoulder_recovery,True
+template_182,2,pairwise_combination,rotator_cuff+large_movers,,,severe+severe,"rotator_cuff severe, large_movers severe",True
+template_183,3,clinical_syndrome,,,brachial_plexus_total,variable,Clinical pattern: brachial_plexus_total,True
+template_184,4,edge_case,,,single_muscle_biceps_long,variable,Edge case: single_muscle_biceps_long,True
+template_185,2,pairwise_combination,large_movers+elbow,,,moderate+moderate,"large_movers moderate, elbow moderate",True
+template_186,4,three_group_combination,rotator_cuff+deltoid+elbow,,,normal+severe+moderate,"Three-group: rotator_cuff normal, deltoid severe, elbow moderate",True
+template_187,1,single_group_mixed,,small_shoulder,,mixed,small_shoulder mixed severity weakness,True
+template_188,2,pairwise_combination,scapular+deltoid,,,moderate+moderate,"scapular moderate, deltoid moderate",True
+template_189,1,single_group_severe,,forearm,,severe,forearm severe weakness,False
+template_190,1,single_group_mixed,,elbow,,mixed,elbow mixed severity weakness,True
+template_191,1,single_group_severe,,elbow,,severe,elbow severe weakness,True
+template_192,3,clinical_syndrome,,,ms_asymmetric,variable,Clinical pattern: ms_asymmetric,True
+template_193,2,pairwise_combination,deltoid+wrist,,,severe+moderate,"deltoid severe, wrist moderate",True
+template_194,2,pairwise_combination,elbow+wrist,,,severe+moderate,"elbow severe, wrist moderate",True
+template_195,2,pairwise_combination,rotator_cuff+forearm,,,severe+severe,"rotator_cuff severe, forearm severe",True
+template_196,2,pairwise_combination,small_shoulder+forearm,,,severe+normal,"small_shoulder severe, forearm normal",True
+template_197,4,global_pattern,elbow+forearm+wrist,,distal_weakness,variable,Global pattern: distal_weakness,True
+template_198,1,single_group_moderate,,scapular,,moderate,scapular moderate weakness,True
+template_199,1,single_group_moderate,,forearm,,moderate,forearm moderate weakness,True
+template_200,1,single_group_moderate,,large_movers,,moderate,large_movers moderate weakness,True
+template_201,2,pairwise_combination,large_movers+small_shoulder,,,moderate+moderate,"large_movers moderate, small_shoulder moderate",True
+template_202,2,pairwise_combination,small_shoulder+forearm,,,moderate+moderate,"small_shoulder moderate, forearm moderate",True
+template_203,1,single_group_severe,,deltoid,,severe,deltoid severe weakness,True
+template_204,2,pairwise_combination,scapular+wrist,,,severe+moderate,"scapular severe, wrist moderate",True
+template_205,1,single_group_mixed,,deltoid,,mixed,deltoid mixed severity weakness,True
+template_206,1,single_group_moderate,,small_shoulder,,moderate,small_shoulder moderate weakness,True
+template_207,3,clinical_syndrome,,,ms_proximal,variable,Clinical pattern: ms_proximal,True
+template_208,2,pairwise_combination,deltoid+forearm,,,severe+severe,"deltoid severe, forearm severe",True
+template_209,1,single_group_moderate,,elbow,,moderate,elbow moderate weakness,True
+template_210,1,single_group_severe,,deltoid,,severe,deltoid severe weakness,True
+template_211,3,clinical_syndrome,,,parkinsons_mild,moderate,Clinical pattern: parkinsons_mild,True
+template_212,2,pairwise_combination,scapular+forearm,,,moderate+moderate,"scapular moderate, forearm moderate",True
+template_213,2,pairwise_combination,small_shoulder+elbow,,,moderate+moderate,"small_shoulder moderate, elbow moderate",True
+template_214,2,pairwise_combination,elbow+forearm,,,severe+severe,"elbow severe, forearm severe",True
+template_215,4,edge_case,,,extreme_proximal_sparing_distal,variable,Edge case: extreme_proximal_sparing_distal,True
+template_216,2,pairwise_combination,large_movers+small_shoulder,,,severe+moderate,"large_movers severe, small_shoulder moderate",True
+template_217,2,pairwise_combination,scapular+rotator_cuff,,,moderate+moderate,"scapular moderate, rotator_cuff moderate",True
+template_218,2,pairwise_combination,large_movers+small_shoulder,,,severe+severe,"large_movers severe, small_shoulder severe",True
+template_219,4,three_group_combination,rotator_cuff+elbow+wrist,,,moderate+normal+severe,"Three-group: rotator_cuff moderate, elbow normal, wrist severe",True
+template_220,3,clinical_syndrome,,,sci_c4_incomplete,variable,Clinical pattern: sci_c4_incomplete,True
+template_221,1,single_group_severe,,large_movers,,severe,large_movers severe weakness,True
+template_222,1,single_group_severe,,small_shoulder,,severe,small_shoulder severe weakness,True
+template_223,3,clinical_syndrome,,,stroke_flexor_mild,moderate,Clinical pattern: stroke_flexor_mild,True
+template_224,3,clinical_syndrome,,,sci_c5_incomplete,variable,Clinical pattern: sci_c5_incomplete,True
+template_225,3,clinical_syndrome,,,sci_c4_complete,variable,Clinical pattern: sci_c4_complete,True
+template_226,1,single_group_moderate,,rotator_cuff,,moderate,rotator_cuff moderate weakness,True
+template_227,2,pairwise_combination,small_shoulder+wrist,,,moderate+moderate,"small_shoulder moderate, wrist moderate",True
+template_228,2,pairwise_combination,rotator_cuff+deltoid,,,severe+normal,"rotator_cuff severe, deltoid normal",True
+template_229,1,single_group_severe,,forearm,,severe,forearm severe weakness,False
+template_230,2,pairwise_combination,deltoid+small_shoulder,,,moderate+moderate,"deltoid moderate, small_shoulder moderate",True
+template_231,2,pairwise_combination,rotator_cuff+forearm,,,severe+normal,"rotator_cuff severe, forearm normal",True
+template_232,4,edge_case,,,single_muscle_supraspinatus,variable,Edge case: single_muscle_supraspinatus,True
+template_233,4,edge_case,,,single_muscle_triceps_long,variable,Edge case: single_muscle_triceps_long,True
+template_234,1,single_group_moderate,,deltoid,,moderate,deltoid moderate weakness,True
+template_235,4,global_pattern,scapular+rotator_cuff,,stability_weakness,variable,Global pattern: stability_weakness,False
+template_236,1,single_group_severe,,scapular,,severe,scapular severe weakness,True

@@ -1,0 +1,23 @@
+{
+    "name": "template_17",
+    "muscles": [
+        "brachiorad_r",
+        "coracobrach_r",
+        "delt_clav_a_r",
+        "delt_scap_p_r",
+        "flex_carpi_rad_r",
+        "lat_dors_m_r",
+        "pect_maj_clav_s_r",
+        "pect_maj_thorax_m_r",
+        "ser_ant_i_r",
+        "ser_ant_m_r",
+        "subscap_i_r",
+        "supinator_r",
+        "teres_maj_r",
+        "teres_min_r",
+        "trap_scap_i_r",
+        "trap_scap_m_r"
+    ],
+    "condition_description": "TBI with upper limb involvement",
+    "rationale": "Diffuse impairments including spasticity and poor coordination across multiple joints."
+}

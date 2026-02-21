@@ -1,0 +1,132 @@
+Query: The patient is a 70-year-old male, 3 years post pontine stroke, with tetraparesis more pronounced in the upper limbs. Voluntary movement in both arms is severely restricted; shoulder flexion is trace (1/5 bilaterally), and finger function is absent. No functional grasp or reach present. Spasticity is intermittent, triggered by high-velocity stretch or cold contact. The patient uses a power wheelchair and communicates verbally but has delayed reaction time and mild apraxia. Head and eye control are preserved. He depends on full assistance for all upper-limb ADLs. Adaptive equipment (universal cuff, mobile arm support) was trialed without success due to limited initiation and endurance.
+Prompt Type: functionality
+Timestamp: 2025-07-11T00:40:21.717338
+--------------------------------------------------------------------------------
+Response:
+```json
+{
+  "condition": "70-year-old male, 3 years post pontine stroke, with tetraparesis more pronounced in the upper limbs",
+
+  "joint_range_of_motion": {
+    "shoulder_flexion": {
+      "active": "0-10° (trace movement)",
+      "passive": "unknown due to spasticity",
+      "source": "clinical observation"
+    },
+    "shoulder_extension": {
+      "active": "unknown",
+      "passive": "unknown",
+      "source": "clinical observation"
+    },
+    "shoulder_abduction": {
+      "active": "unknown",
+      "passive": "unknown",
+      "source": "clinical observation"
+    },
+    "shoulder_adduction": {
+      "active": "unknown",
+      "passive": "unknown",
+      "source": "clinical observation"
+    },
+    "shoulder_internal_rotation": {
+      "active": "unknown",
+      "passive": "unknown",
+      "source": "clinical observation"
+    },
+    "shoulder_external_rotation": {
+      "active": "unknown",
+      "passive": "unknown",
+      "source": "clinical observation"
+    },
+    "elbow_flexion": {
+      "active": "unknown",
+      "passive": "unknown",
+      "source": "clinical observation"
+    },
+    "elbow_extension": {
+      "active": "unknown",
+      "passive": "unknown",
+      "source": "clinical observation"
+    },
+    "forearm_supination": {
+      "active": "unknown",
+      "passive": "unknown",
+      "source": "clinical observation"
+    },
+    "forearm_pronation": {
+      "active": "unknown",
+      "passive": "unknown",
+      "source": "clinical observation"
+    },
+    "wrist_flexion": {
+      "active": "unknown",
+      "passive": "unknown",
+      "source": "clinical observation"
+    },
+    "wrist_extension": {
+      "active": "unknown",
+      "passive": "unknown",
+      "source": "clinical observation"
+    },
+    "finger_flexion": {
+      "active": "0° (absent)",
+      "passive": "unknown",
+      "source": "clinical observation"
+    },
+    "finger_extension": {
+      "active": "0° (absent)",
+      "passive": "unknown",
+      "source": "clinical observation"
+    }
+  },
+
+  "muscle_strength": {
+    "deltoid": { "score": 1, "percent": "25%", "source": "clinical observation" },
+    "biceps": { "score": "unknown", "percent": "variable", "source": "clinical observation" },
+    "triceps": { "score": "unknown", "percent": "variable", "source": "clinical observation" },
+    "brachialis": { "score": "unknown", "percent": "variable", "source": "clinical observation" },
+    "brachioradialis": { "score": "unknown", "percent": "variable", "source": "clinical observation" },
+    "supinator": { "score": "unknown", "percent": "variable", "source": "clinical observation" },
+    "pronator_teres": { "score": "unknown", "percent": "variable", "source": "clinical observation" },
+    "wrist_extensors": { "score": "unknown", "percent": "variable", "source": "clinical observation" },
+    "wrist_flexors": { "score": "unknown", "percent": "variable", "source": "clinical observation" },
+    "flexor_digitorum_profundus": { "score": 0, "percent": "0%", "source": "clinical observation" },
+    "flexor_digitorum_superficialis": { "score": 0, "percent": "0%", "source": "clinical observation" },
+    "extensor_digitorum": { "score": 0, "percent": "0%", "source": "clinical observation" },
+    "thenar_muscles": { "score": "unknown", "percent": "variable", "source": "clinical observation" },
+    "hypothenar_muscles": { "score": "unknown", "percent": "variable", "source": "clinical observation" },
+    "interossei": { "score": "unknown", "percent": "variable", "source": "clinical observation" }
+  },
+
+  "motor_control": {
+    "description": "Severe limitation in voluntary movement with absence of functional grasp or reach, presence of apraxia contributing to difficulty in initiating and coordinating movements.",
+    "source": "Quick reference to occupational therapy"
+  },
+
+  "tone_spasticity": {
+    "description": "Intermittent spasticity, more likely in flexor muscle groups, triggered by high-velocity stretch or cold, suggesting variable tone management challenges.",
+    "source": "clinical observation"
+  },
+
+  "compensatory_patterns": [
+    "Potential use of trunk and head movements to compensate for severely restricted upper limb motion.",
+    "May use increased effort from less affected muscles to initiate any possible movement.",
+    "Likely compensatory verbal and visual communication due to inability to perform manual tasks."
+  ],
+
+  "functional_use": {
+    "expected_abilities": [
+      "Able to communicate verbally, albeit with delayed reaction time.",
+      "Head and eye control preserved, allowing for potential use of head or eye-tracking technology for communication or control devices."
+    ],
+    "limitations": [
+      "Complete dependence on caregivers for ADLs due to absence of hand function and severe restriction in upper limb voluntary movement.",
+      "Inability to use any form of grip, severely restricting interaction with objects and environment."
+    ]
+  },
+
+  "confidence_notes": "This assessment contains high variability in muscle strength, ROM, and motor control due to the complexity of the stroke impact. Actual user assessment is critical for accurate simulation adjustments.",
+
+  "source_reference": "Quick Reference to Occupational Therapy, Clinical Observations"
+}
+```

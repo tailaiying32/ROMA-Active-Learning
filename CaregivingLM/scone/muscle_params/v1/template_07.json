@@ -1,0 +1,22 @@
+{
+    "name": "template_07",
+    "muscles": [
+        "bic_brev_r",
+        "bic_long_r",
+        "brachiorad_r",
+        "delt_clav_a_r",
+        "delt_scap_p_r",
+        "flex_carpi_ulna_r",
+        "infraspi_i_r",
+        "lat_dors_m_r",
+        "lev_scap_r",
+        "pect_maj_clav_s_r",
+        "rhom_s_r",
+        "ser_ant_i_r",
+        "subscap_s_r",
+        "supraspi_r",
+        "trap_scap_m_r"
+    ],
+    "condition_description": "Peripheral neuropathy",
+    "rationale": "Distal hand and forearm muscles often impaired, sparing proximal control."
+}

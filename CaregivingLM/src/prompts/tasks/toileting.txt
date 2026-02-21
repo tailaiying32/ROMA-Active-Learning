@@ -1,0 +1,27 @@
+# Toileting Task Analysis
+
+## Functional Abilities Required
+- Lower extremity strength for transfers and positioning
+- Trunk control and balance for seated toileting
+- Hand function for clothing management and hygiene
+- Mobility for bathroom access and positioning
+- Cognitive awareness for toileting needs and safety
+
+## User Limitations That Matter Most
+- Poor lower extremity strength affecting transfers
+- Balance issues affecting seated stability
+- Limited hand function for clothing management
+- Mobility restrictions affecting bathroom access
+- Cognitive deficits affecting toileting awareness
+
+## Variation in Assistance Strategies
+- **Mild impairment**: Grab bars, raised toilet seats, adaptive clothing
+- **Moderate impairment**: Transfer assistance, commode chairs, caregiver setup
+- **Severe impairment**: Full transfer assistance, specialized toileting equipment
+
+## Robot Adaptation Considerations
+- Movement speed should be very slow and controlled for transfers
+- Trajectory planning should prioritize safety and stability
+- Grasp assistance should provide secure support during transfers
+- Postural support is critical for maintaining balance during toileting
+- Communication should be clear and maintain dignity during personal care

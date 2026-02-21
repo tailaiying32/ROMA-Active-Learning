@@ -1,0 +1,31 @@
+{
+    "name": "template_02",
+    "muscles": [
+        "bic_brev_r",
+        "brachiorad_r",
+        "delt_clav_a_r",
+        "delt_scap_m_r",
+        "delt_scap_p_r",
+        "ext_carpi_rad_brev_r",
+        "ext_carpi_rad_long_r",
+        "flex_carpi_rad_r",
+        "flex_carpi_ulna_r",
+        "infraspi_i_r",
+        "infraspi_s_r",
+        "lat_dors_i_r",
+        "lev_scap_r",
+        "pect_maj_thorax_i_r",
+        "pect_maj_thorax_m_r",
+        "pronator_teres_r",
+        "rhom_i_r",
+        "supraspi_r",
+        "teres_maj_r",
+        "teres_min_r",
+        "trap_scap_i_r",
+        "trap_scap_m_r",
+        "trap_scap_s_r",
+        "tri_lat_r"
+    ],
+    "condition_description": "Spastic cerebral palsy",
+    "rationale": "Flexor synergy dominates with reduced control of extensors and external rotators."
+}

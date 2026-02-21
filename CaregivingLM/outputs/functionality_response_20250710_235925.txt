@@ -1,0 +1,132 @@
+Query: Patient with left hemiplegia following ischemic stroke affecting the right middle cerebral artery, 3 months post-stroke
+Prompt Type: functionality
+Timestamp: 2025-07-10T23:59:25.500219
+--------------------------------------------------------------------------------
+Response:
+```json
+{
+  "condition": "Left Hemiplegia following ischemic stroke affecting the right middle cerebral artery, 3 months post-stroke",
+
+  "joint_range_of_motion": {
+    "shoulder_flexion": {
+      "active": "unknown, highly variable",
+      "passive": "0–150°, may be limited by spasticity",
+      "source": "Clinical experience and general stroke rehabilitation knowledge"
+    },
+    "shoulder_extension": {
+      "active": "unknown, highly variable",
+      "passive": "0–40°, may be limited by spasticity",
+      "source": "Based on standard hemiplegic shoulder ROM post-stroke"
+    },
+    "shoulder_abduction": {
+      "active": "unknown, highly variable due to potential deltoid and supraspinatus weakness",
+      "passive": "0–180°, commonly restricted by spasticity in adductors and internal rotators",
+      "source": "General post-stroke rehabilitation principles"
+    },
+    "shoulder_adduction": {
+      "active": "unknown, typically less affected",
+      "passive": "Limited by patient's comfort and spasticity",
+      "source": "Clinical experience"
+    },
+    "shoulder_internal_rotation": {
+      "active": "unknown",
+      "passive": "0–70°, often limited by external rotator spasticity",
+      "source": "Based on typical post-stroke muscle tone alterations"
+    },
+    "shoulder_external_rotation": {
+      "active": "unknown",
+      "passive": "0–90°, limited by internal rotator spasticity",
+      "source": "Clinical stroke rehabilitation guidelines"
+    },
+    "elbow_flexion": {
+      "active": "unknown, highly variable",
+      "passive": "0–150°, may be limited by spasticity in extensors",
+      "source": "Clinical observation and general post-stroke management"
+    },
+    "elbow_extension": {
+      "active": "unknown, often significantly impaired",
+      "passive": "0–10°, limited by flexor spasticity",
+      "source": "General post-stroke spasticity patterns"
+    },
+    "forearm_supination": {
+      "active": "unknown",
+      "passive": "0–90°, may be limited by pronator spasticity",
+      "source": "Standard neurological rehabilitation textbooks"
+    },
+    "forearm_pronation": {
+      "active": "unknown",
+      "passive": "0–90°, possibly less due to supinator and biceps spasticity",
+      "source": "Clinical experience with stroke patients"
+    },
+    "wrist_flexion": {
+      "active": "unknown, highly variable",
+      "passive": "0–80°, often limited due to extensor weakness and flexor spasticity",
+      "source": "Common findings in hemiplegic patients post-stroke"
+    },
+    "wrist_extension": {
+      "active": "unknown, highly variable",
+      "passive": "0–70°, limited by flexor spasticity",
+      "source": "Post-stroke upper limb motor control dynamics"
+    },
+    "finger_flexion": {
+      "active": "unknown, typically reduced",
+      "passive": "Variable, often limited by spasticity of flexors",
+      "source": "Standard post-stroke spasticity and motor impairment patterns"
+    },
+    "finger_extension": {
+      "active": "unknown, commonly impaired",
+      "passive": "Highly variable, restricted by flexor spasticity",
+      "source": "Observations from stroke rehabilitation practice"
+    }
+  },
+
+  "muscle_strength": {
+    "deltoid": { "score": "1-2", "percent": "25-50%", "source": "Based on clinical patterns of stroke-induced hemiplegia" },
+    "biceps": { "score": "1-2", "percent": "25-50%", "source": "Common post-stroke strength profile" },
+    "triceps": { "score": "1", "percent": "25%", "source": "Typical post-stroke weakness in extensors" },
+    "brachialis": { "score": "1-2", "percent": "25-50%", "source": "Observed patterns of muscle weakness post-stroke" },
+    "brachioradialis": { "score": "1-2", "percent": "25-50%", "source": "Based on typical post-stroke muscle strength levels" },
+    "supinator": { "score": "unknown", "percent": "highly variable", "source": "Specific assessment needed" },
+    "pronator_teres": { "score": "1-2", "percent": "25-50%", "source": "Estimation based on common post-stroke presentation" },
+    "wrist_extensors": { "score": "1", "percent": "25%", "source": "Frequent post-stroke condition" },
+    "wrist_flexors": { "score": "2", "percent": "50%", "source": "Relative preservation compared to extensors" },
+    "flexor_digitorum_profundus": { "score": "1-2", "percent": "25-50%", "source": "Observed strength in stroke survivors" },
+    "flexor_digitorum_superficialis": { "score": "1-2", "percent": "25-50%", "source": "Typical findings in stroke rehabilitation" },
+    "extensor_digitorum": { "score": "1", "percent": "25%", "source": "Commonly weak post-stroke" },
+    "thenar_muscles": { "score": "unknown", "percent": "highly variable", "source": "Specific tests required" },
+    "hypothenar_muscles": { "score": "unknown", "percent": "highly variable", "source": "Requires individual assessment" },
+    "interossei": { "score": "unknown", "percent": "highly variable", "source": "Patient-specific evaluation recommended" }
+  },
+
+  "motor_control": {
+    "description": "Impaired, varies with muscle strength, spasticity, and ability to initiate movement. Coordination between muscle groups may be significantly disrupted.",
+    "source": "General principles of post-stroke motor recovery"
+  },
+
+  "tone_spasticity": {
+    "description": "Likely present, especially in flexor muscle groups of the upper limb, contributing to common compensatory patterns such as shoulder adduction and internal rotation, elbow flexion, wrist and finger flexion.",
+    "source": "Typical presentation in chronic phase of stroke recovery"
+  },
+
+  "compensatory_patterns": [
+    "Using unaffected limb for bilateral tasks",
+    "Elevating shoulder to compensate for weak elbow extension/flexion",
+    "Body turning to compensate for limited upper extremity reach"
+  ],
+
+  "functional_use": {
+    "expected_abilities": [
+      "Ability to perform some gross movements with the affected limb, such as shoulder shrug, minimal arm elevation",
+      "Some degree of hand-to-mouth activities with adapted devices or techniques"
+    ],
+    "limitations": [
+      "Significant difficulty or inability to perform fine motor tasks",
+      "Reduced ability to perform activities of daily living (ADL) requiring bilateral upper extremity coordination"
+    ]
+  },
+
+  "confidence_notes": "Muscle strength, ROM, and motor control estimates are based on common clinical presentations and outcomes post-stroke. Each patient's recovery trajectory is highly individual, requiring thorough assessment for accurate quantification.",
+
+  "source_reference": "General stroke rehabilitation guidelines, Quick Reference to Occupational Therapy, and clinical observations in stroke rehabilitation. Specific patient assessment data needed for precise modeling and intervention planning."
+}
+```

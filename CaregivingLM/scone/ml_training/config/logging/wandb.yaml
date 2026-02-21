@@ -1,0 +1,20 @@
+# @package logging
+
+# Weights & Biases configuration
+use_wandb: true
+project_name: "scone-reach-prediction"
+entity: null  # Set to your wandb username
+tags: ["baseline", "dual-encoder"]
+
+# Logging frequency
+log_every_n_steps: 10
+log_gradients: false
+log_parameters: false
+
+# What to log
+log_metrics: true
+log_model_checkpoints: false
+log_code: true
+
+# Offline mode (useful for debugging)
+offline: false

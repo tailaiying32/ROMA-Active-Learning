@@ -1,0 +1,17 @@
+{
+    "name": "template_06",
+    "muscles": [
+        "delt_scap_p_r",
+        "infraspi_i_r",
+        "lat_dors_i_r",
+        "pect_maj_thorax_i_r",
+        "pect_maj_thorax_m_r",
+        "rhom_s_r",
+        "subscap_i_r",
+        "supraspi_r",
+        "trap_clav_s_r",
+        "tri_lat_r"
+    ],
+    "condition_description": "Brachial plexus injury (upper trunk)",
+    "rationale": "Weakness in shoulder abductors and elbow flexors from C5\u2013C6 root trauma."
+}

@@ -1,0 +1,19 @@
+{
+    "name": "template_16",
+    "muscles": [
+        "ext_carpi_rad_brev_r",
+        "lat_dors_m_r",
+        "pect_maj_thorax_i_r",
+        "pronator_teres_r",
+        "rhom_i_r",
+        "ser_ant_i_r",
+        "ser_ant_s_r",
+        "subscap_i_r",
+        "supinator_r",
+        "trap_scap_m_r",
+        "trap_scap_s_r",
+        "tri_lat_r"
+    ],
+    "condition_description": "Spinal muscular atrophy (type III)",
+    "rationale": "Proximal > distal symmetric weakness from motor neuron degeneration."
+}

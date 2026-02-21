@@ -1,0 +1,11 @@
+{
+  "output_directory": "scraped_articles",
+  "max_pdfs_to_download": 2000000,
+  "databases": ["pubmed"],
+  "log_level": "INFO",
+  "download_delay": 1.0,
+  "retry_attempts": 3,
+  "shuffle_seed": 0,
+  "pdf_download_path": "/media/ziang/My Book/Cornell/Research/CareLM_Downloads",
+  "max_download_workers": 64
+} 

@@ -1,0 +1,179 @@
+# ACTIVE LEARNING CONFIGURATION FILE
+
+# ===== BALD optimizer settings =====
+bald:
+  tau: 0.05258564011244907 # Sigmoid temperature (lower = sharper feasibility boundary)
+  n_mc_samples: 38 # Number of Monte Carlo samples for BALD estimation
+  sampling_temperature: 1.0 # Temperature scaling for sampling (e.g. 1.25 samples ~25% wider std dev)
+  # epsilon and epsilon_decay moved to acquisition section
+  boundary_weight: 0.0 # [DEPRECATED] Weight for boundary-aware exploration (score = BALD + weight * KL(post||prior))
+
+  # Weighted BALD settings (Targeted Boundary Exploration)
+  use_weighted_bald: true # Enable Weighted BALD (score * gate)
+  weighted_bald_sigma: 0.1 # Width of the Gaussian gate (standard deviation). Controls focus on p=0.5.
+  weighted_bald_sigma_schedule:
+    start: 0.25
+    end: 0.05
+    duration: 20
+    schedule: linear
+
+  tau_schedule:
+    start: 0.15
+    end: 0.05258564011244907
+    duration: 20
+    schedule: linear
+
+  diversity_weight: 0.0 # Weight for sequential diversity bonus (distance to past test points)
+  use_anatomical_bounds: true # Whether to constrain test points to anatomical limits (false = [-pi, pi])
+
+# ===== Visualization settings =====
+visualization:
+  cap_joint_evolution_to_anatomical: false  # Cap y-axis of joint evolution plots to anatomical limits
+
+# ===== Metrics evaluation settings =====
+metrics:
+  grid_resolution: 16  # Resolution for reachability metric evaluation grid (higher = more accurate but slower)
+
+# ===== Acquisition strategy settings =====
+acquisition:
+  strategy: bald  # Options: 'bald', 'random', 'canonical', 'quasi-random'
+  epsilon: 0.0           # Epsilon-greedy exploration rate (0.0 = pure acquisition strategy)
+  epsilon_decay: 0.95    # Decay factor applied each iteration
+
+  # Canonical settings
+  n_canonical: 5  # Number of pre-computed exploration queries
+  canonical_path: models/canonical_queries.npz  # Path to pre-computed canonical queries
+
+  # Quasi-random settings
+  n_quasi_random: 5  # Number of initial Sobol points
+  
+  # Grid strategy settings (for GridStrategy baseline)
+  grid_strategy_resolution: 16  # Resolution per dimension for grid-based acquisition (total points = resolution^n_joints)
+
+# ===== BALD optimization (test selection) settings =====
+bald_optimization:
+  n_restarts: 18 # Number of random restarts for optimization
+  n_iters_per_restart: 33 # Iterations per restart
+  lr_adam: 0.026149538281225054 # Learning rate for ADAM phase
+  lr_sgd: 0.012151548183804636 # Learning rate for SGD phase (more stable near convergence)
+  switch_to_sgd_at: 0.7349492128258984 # Fraction of iterations before switching from ADAM to SGD
+  plateau_patience: 3 # Stop restart if BALD plateaus for this many iterations
+  plateau_threshold: 0.00037236786558646586 # Minimum improvement t not count as plateau
+
+# ===== Variational inference settings =====
+vi:
+  n_mc_samples: 36 # Number of MC samples for ELBO estimation
+  noise_std: 1.0 # Gaussian likelihood noise std (tune based on logit scale)
+  learning_rate: 0.05842346969502842 # Learning rate for optimizer
+  optimizer_type: adam # Optimizer type: 'adam' or 'sgd'
+  max_iters: 199 # Maximum optimization iterations
+  convergence_tol: 0.0005778113811477108 # ELBO improvement threshold for convergence
+  patience: 2 # Iterations without improvement before stopping
+  grad_clip: 3.0 # Gradient clipping threshold
+
+  # KL Annealing settings (controls regularization strength)
+  kl_annealing:
+    enabled: true        # Enable KL annealing
+    start_weight: 0.2859904093419542   # Initial small weight to allow free exploration
+    end_weight: 0.2859904093419542     # Final KL weight (regularization strength)
+    duration: 1         # Iterations to reach end_weight (or switch step)
+    schedule: linear     # Options: 'linear', 'cosine', 'logistic', 'step'
+
+  # Added for backwards compatibility/explicit config
+  kl_weight: 1.0
+
+# ===== Stopping criteria for active learning loop =====
+stopping:
+  budget: 20 # Maximum number of queries (hard limit)
+
+  # --- ELBO Plateau Stopping ---
+  elbo_plateau_enabled: false # Enable ELBO plateau stopping
+  elbo_plateau_window: 3 # Number of iterations to check for ELBO plateau
+  elbo_plateau_threshold: 0.01 # Minimum ELBO improvement over window to continue
+
+  # --- Posterior Uncertainty Stopping ---
+  uncertainty_enabled: false # Enable uncertainty-based stopping
+  uncertainty_threshold: 0.02 # Stop when mean posterior std falls below this threshold
+  uncertainty_params: all # Which parameters to check: 'bump_centers', 'all', or list of param names
+
+  # --- BALD Score Stopping ---
+  bald_enabled: false # Enable BALD-based stopping
+  bald_threshold: 0.1 # Stop when best BALD score falls below this threshold
+  bald_patience: 3 # Number of consecutive low-BALD iterations before stopping
+
+# ===== Prior distribution configuration =====
+prior:
+  mean_noise_std: 0.4 # Standard deviation for noise added to prior means (as fraction of joint range)
+  init_std: 0.4 # Initial standard deviation for Gaussian parameters (controls prior width)
+  use_uniform_prior: false # Whether to use uniform prior for joint limits (vs Gaussian)
+  use_anatomical_limit_prior: true # If true, sets prior mean to default anatomical limits (healthy person)
+  # fixed_percentile_range: [0.25, 0.75] # If set, centers prior mean at these percentiles of anatomical limits
+
+
+  joint_names:
+    # - scapula_abduction_r
+    # - scapula_elevation_r
+    # - scapula_winging_r
+    - shoulder_flexion_r
+    - shoulder_abduction_r
+    - shoulder_rotation_r
+    - elbow_flexion_r
+
+  # Units for anatomical limits: 'radians' or 'degrees'
+  units: degrees
+
+  # Global anatomical limits for each joint
+  anatomical_limits:
+    # scapula_abduction_r: [-35, 45]
+    # scapula_elevation_r: [-45, 45]
+    # scapula_winging_r: [-45, 45]
+    shoulder_flexion_r: [-45, 150]
+    shoulder_abduction_r: [-60, 120]
+    shoulder_rotation_r: [-60, 60]
+    elbow_flexion_r: [0, 130]
+
+  pair_names:
+    - [shoulder_flexion_r, shoulder_abduction_r]
+    - [shoulder_flexion_r, shoulder_rotation_r]
+    - [shoulder_flexion_r, elbow_flexion_r]
+    - [shoulder_abduction_r, shoulder_rotation_r]
+    - [shoulder_abduction_r, elbow_flexion_r]
+    - [shoulder_rotation_r, elbow_flexion_r]
+
+update_posterior: true # Whether to update posterior after each query
+
+seed: null # Random seed for reproducibility (null = no seed)
+
+# ===== Latent Space Configuration (for latent active learning) =====
+latent:
+  latent_dim: 32 # Dimension of latent space (should match trained model)
+  model_path: ../models/best_model.pt # Path to trained LevelSetDecoder model
+  dataset_path: ../models/training_data.npz # Path to training data for ground truth selection
+
+
+# =============================================================================
+# DEPRECATED / UNUSED PARAMETERS
+# =============================================================================
+# These parameters are kept for backward compatibility or legacy pipeline usage.
+
+deprecated:
+  # Unused BALD parameters (kept for reference)
+  bald:
+    use_smooth: true # Only used by legacy feasibility_checker.py
+    smoothing_k: 0.1 # Only used by legacy feasibility_checker.py
+    combine_temperature: 0.1 # UNUSED - not referenced in codebase
+
+  # Unused prior parameters
+  prior:
+    n_bumps_per_pair: 0 # UNUSED - not referenced in codebase
+
+  # User generation config (legacy joint-space pipeline only)
+  user_generation:
+    seed: null # Random seed for user generation (null = random)
+    limit_width_fraction: [0.5, 1.0] # width_fraction: (min, max) fraction of the full anatomical range
+    bump_prob: 0 # Probability that any given pair has a bump
+    max_bumps_per_pair: 1 # Max bumps per pair
+    bump_params:
+      alpha_range: [0.8, 1.5] # Height of the bump (alpha)
+      ls_range: [0.3, 0.8] # Lengthscale (width) of the bump
+      theta_range: [-0.5, 0.5] # Rotation (theta)

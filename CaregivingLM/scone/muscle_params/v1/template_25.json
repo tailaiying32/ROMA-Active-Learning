@@ -1,0 +1,23 @@
+{
+    "name": "template_25",
+    "muscles": [
+        "bic_long_r",
+        "delt_scap_p_r",
+        "ext_carpi_rad_long_r",
+        "ext_carpi_ulna_r",
+        "flex_carpi_rad_r",
+        "flex_carpi_ulna_r",
+        "lev_scap_r",
+        "pect_maj_thorax_m_r",
+        "rhom_i_r",
+        "rhom_s_r",
+        "ser_ant_i_r",
+        "ser_ant_m_r",
+        "subscap_i_r",
+        "teres_maj_r",
+        "teres_min_r",
+        "trap_scap_i_r"
+    ],
+    "condition_description": "Myasthenia gravis (early stage)",
+    "rationale": "Fatigable weakness in proximal upper limb muscles with preserved strength at rest."
+}

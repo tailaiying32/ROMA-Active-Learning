@@ -1,0 +1,132 @@
+Query: Patient with left hemiplegia following ischemic stroke affecting the right middle cerebral artery, 3 months post-stroke
+Prompt Type: functionality
+Timestamp: 2025-07-11T00:18:49.852737
+--------------------------------------------------------------------------------
+Response:
+```json
+{
+  "condition": "Left hemiplegia following ischemic stroke affecting the right middle cerebral artery, 3 months post-stroke",
+
+  "joint_range_of_motion": {
+    "shoulder_flexion": {
+      "active": "highly variable; dependent on severity",
+      "passive": "0-90°, potentially limited due to spasticity or contractures",
+      "source": "Clinical experience and literature review"
+    },
+    "shoulder_extension": {
+      "active": "highly variable",
+      "passive": "0-45°, potentially limited by spasticity",
+      "source": "Clinical experience and Brunnstrom approach"
+    },
+    "shoulder_abduction": {
+      "active": "highly variable",
+      "passive": "0-90°, may be limited by adductor spasticity",
+      "source": "Clinical experience"
+    },
+    "shoulder_adduction": {
+      "active": "highly variable",
+      "passive": "0-45°",
+      "source": "Clinical experience"
+    },
+    "shoulder_internal_rotation": {
+      "active": "highly variable",
+      "passive": "0-70°, limited by external rotation spasticity",
+      "source": "Clinical experience"
+    },
+    "shoulder_external_rotation": {
+      "active": "highly variable",
+      "passive": "0-90°, limited by internal rotation spasticity",
+      "source": "Clinical experience"
+    },
+    "elbow_flexion": {
+      "active": "highly variable",
+      "passive": "0-145°, limited by flexor spasticity",
+      "source": "Clinical observations"
+    },
+    "elbow_extension": {
+      "active": "highly variable",
+      "passive": "0-30°, extension may be limited by flexor spasticity",
+      "source": "Clinical observations"
+    },
+    "forearm_supination": {
+      "active": "highly variable",
+      "passive": "0-90°, may be limited due to pronator spasticity",
+      "source": "Clinical observations"
+    },
+    "forearm_pronation": {
+      "active": "highly variable",
+      "passive": "0-90°, may be limited due to supinator spasticity",
+      "source": "Clinical observations"
+    },
+    "wrist_flexion": {
+      "active": "highly variable",
+      "passive": "0-80°, commonly restricted by flexor spasticity",
+      "source": "Clinical observations"
+    },
+    "wrist_extension": {
+      "active": "highly variable",
+      "passive": "0-70°, may be limited by flexor spasticity",
+      "source": "Clinical observations"
+    },
+    "finger_flexion": {
+      "active": "highly variable",
+      "passive": "0-90°, typically limited due to flexor spasticity",
+      "source": "Clinical observations"
+    },
+    "finger_extension": {
+      "active": "highly variable",
+      "passive": "0-30°, limited by flexor spasticity and potential clawing from intrinsic muscle imbalance",
+      "source": "Clinical observations"
+    }
+  },
+
+  "muscle_strength": {
+    "deltoid": { "score": "2-3", "percent": "50-75%", "source": "General stroke recovery patterns" },
+    "biceps": { "score": "2-3", "percent": "50-75%", "source": "General stroke recovery patterns" },
+    "triceps": { "score": "1-2", "percent": "25-50%", "source": "Depends on level of spasticity observed" },
+    "brachialis": { "score": "1-2", "percent": "25-50%", "source": "Affected by similar factors as biceps and triceps" },
+    "brachioradialis": { "score": "2", "percent": "50%", "source": "Based on typical motor recovery post-stroke" },
+    "supinator": { "score": "1-2", "percent": "25-50%", "source": "Dependent on severity of motor impairment" },
+    "pronator_teres": { "score": "2", "percent": "50%", "source": "Based on typical upper limb recovery post-stroke" },
+    "wrist_extensors": { "score": "1-2", "percent": "25-50%", "source": "Influenced by level of spasticity" },
+    "wrist_flexors": { "score": "2-3", "percent": "50-75%", "source": "Assumption based on common post-stroke patterns" },
+    "flexor_digitorum_profundus": { "score": "2", "percent": "50%", "source": "Based on typical post-stroke recovery patterns" },
+    "flexor_digitorum_superficialis": { "score": "2", "percent": "50%", "source": "Based on clinical observation" },
+    "extensor_digitorum": { "score": "1-2", "percent": "25-50%", "source": "Dependent on individual's recovery trajectory" },
+    "thenar_muscles": { "score": "1-2", "percent": "25-50%", "source": "Depends on the extent of cortical involvement" },
+    "hypothenar_muscles": { "score": "1-2", "percent": "25-50%", "source": "Depends on individual progression" },
+    "interossei": { "score": "1-2", "percent": "25-50%", "source": "Affected by overall hand function and spasticity" }
+  },
+
+  "motor_control": {
+    "description": "Variable, often characterized by impaired coordination, slow motor response, and difficulty with fine motor tasks",
+    "source": "Supporting documents and clinical guidelines on stroke rehabilitation"
+  },
+
+  "tone_spasticity": {
+    "description": "Can range from low (flaccidity) to high (spasticity); normally, spasticity increases over time post-stroke, affecting ROM and muscle strength",
+    "source": "Clinical evidence and research on post-stroke spasticity"
+  },
+
+  "compensatory_patterns": [
+    "Over-reliance on unaffected side",
+    "Developed use of trunk and shoulder to assist in arm/hand movement",
+    "Altered posture and positioning during tasks"
+  ],
+
+  "functional_use": {
+    "expected_abilities": [
+      "Able to perform some basic ADLs with modifications or adaptive equipment",
+      "Can participate in simplified versions of productive and leisure activities with support"
+    ],
+    "limitations": [
+      "Difficulty with fine motor skills and tasks requiring precise hand use",
+      "Limited endurance for physical tasks due to increased effort for movement"
+    ]
+  },
+
+  "confidence_notes": "These estimates are based on generalizations from clinical studies and guidelines on stroke recovery. Individual variations are significant, and actual capability may vary based on factors not covered in this simulation. Close monitoring and regular, specific assessments are crucial for accurate planning and intervention.",
+
+  "source_reference": "Quick Reference to Occupational Therapy, Stroke Rehabilitation Guidelines (AHA), OTA Handbook for CVA Rehabilitation, Brunnstrom's Movement Therapy in Hemiplegia"
+}
+```

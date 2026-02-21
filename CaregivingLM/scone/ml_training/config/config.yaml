@@ -1,0 +1,16 @@
+# @package _global_
+
+# Main configuration file
+defaults:
+  - model: dual_encoder
+  - data: default
+  - training: default
+  - logging: wandb
+  - _self_
+
+# Experiment settings
+experiment_name: "scone_reach_prediction"
+seed: 42
+
+# Output directory
+output_dir: "./outputs/${now:%Y-%m-%d_%H-%M-%S}"

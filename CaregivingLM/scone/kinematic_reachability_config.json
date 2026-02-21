@@ -1,0 +1,27 @@
+{
+  "model": {
+    "file": "models/HSA13T_hfd_joint.scone",
+    "target_dofs": [
+      "shoulder_flexion_r",
+      "shoulder_abduction_r",
+      "shoulder_rotation_r",
+      "elbow_flexion_r"
+    ],
+    "hand_body": "hand_r"
+  },
+  "joint_limits": {
+    "shoulder_flexion_r": [-45, 150],
+    "shoulder_abduction_r": [-60, 120],
+    "shoulder_rotation_r": [-60, 60],
+    "elbow_flexion_r": [0, 130]
+  },
+  "sampling": {
+    "halton_samples": 1000,
+    "boundary_mode": "corners_plus_midpoints"
+  },
+  "output": {
+    "directory": "kinematic_reachability",
+    "filename_prefix": "hand_reach",
+    "save_point_cloud": true
+  }
+}

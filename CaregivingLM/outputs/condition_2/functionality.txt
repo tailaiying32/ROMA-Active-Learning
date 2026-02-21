@@ -1,0 +1,125 @@
+{
+  "condition": "Moderate left hemiparesis post right MCA infarct, with spasticity and partial shoulder subluxation",
+
+  "joint_range_of_motion": {
+    "shoulder_flexion": {
+      "active": "0–80°",
+      "passive": "unknown",
+      "source": "User Medical Condition"
+    },
+    "shoulder_extension": {
+      "active": "unknown",
+      "passive": "unknown",
+      "source": "unknown"
+    },
+    "shoulder_abduction": {
+      "active": "unknown",
+      "passive": "unknown",
+      "source": "unknown"
+    },
+    "shoulder_adduction": {
+      "active": "limited due to spasticity",
+      "passive": "unknown",
+      "source": "Relevant Clinical Context"
+    },
+    "shoulder_internal_rotation": {
+      "active": "limited due to spasticity",
+      "passive": "unknown",
+      "source": "Relevant Clinical Context"
+    },
+    "shoulder_external_rotation": {
+      "active": "unknown",
+      "passive": "unknown",
+      "source": "unknown"
+    },
+    "elbow_flexion": {
+      "active": "0–100°",
+      "passive": "unknown",
+      "source": "User Medical Condition"
+    },
+    "elbow_extension": {
+      "active": "limited due to spasticity",
+      "passive": "unknown",
+      "source": "Relevant Clinical Context"
+    },
+    "forearm_supination": {
+      "active": "limited",
+      "passive": "unknown",
+      "source": "unknown"
+    },
+    "forearm_pronation": {
+      "active": "limited due to spasticity",
+      "passive": "unknown",
+      "source": "Relevant Clinical Context"
+    },
+    "wrist_flexion": {
+      "active": "limited due to spasticity",
+      "passive": "unknown",
+      "source": "Relevant Clinical Context"
+    },
+    "wrist_extension": {
+      "active": "limited",
+      "passive": "unknown",
+      "source": "unknown"
+    },
+    "finger_flexion": {
+      "active": "non-functional",
+      "passive": "unknown",
+      "source": "User Medical Condition"
+    },
+    "finger_extension": {
+      "active": "non-functional",
+      "passive": "unknown",
+      "source": "User Medical Condition"
+    }
+  },
+
+  "muscle_strength": {
+    "deltoid": {"score": 1, "percent": "25%", "source": "Estimation based on limited shoulder flexion"},
+    "biceps": {"score": 2, "percent": "50%", "source": "Estimation based on preserved elbow flexion"},
+    "triceps": {"score": "unknown", "percent": "unknown", "source": "unknown"},
+    "brachialis": {"score": 2, "percent": "50%", "source": "Estimation based on elbow flexion capabilities"},
+    "brachioradialis": {"score": "unknown", "percent": "unknown", "source": "unknown"},
+    "supinator": {"score": "unknown", "percent": "unknown", "source": "unknown"},
+    "pronator_teres": {"score": "unknown", "percent": "unknown", "source": "unknown"},
+    "wrist_extensors": {"score": 1, "percent": "25%", "source": "Estimation due to spasticity and limited movement"},
+    "wrist_flexors": {"score": 2, "percent": "50%", "source": "Estimation based on spasticity patterns"},
+    "flexor_digitorum_profundus": {"score": 0, "percent": "0%", "source": "Finger function non-functional"},
+    "flexor_digitorum_superficialis": {"score": 0, "percent": "0%", "source": "Finger function non-functional"},
+    "extensor_digitorum": {"score": 0, "percent": "0%", "source": "Finger function non-functional"},
+    "thenar_muscles": {"score": 0, "percent": "0%", "source": "Minimal active hand movement"},
+    "hypothenar_muscles": {"score": 0, "percent": "0%", "source": "Minimal active hand movement"},
+    "interossei": {"score": 0, "percent": "0%", "source": "Finger function non-functional"}
+  },
+
+  "motor_control": {
+    "description": "Significant impairment in voluntary movement control, especially fine motor skills due to moderate hemiparesis and spasticity",
+    "source": "User Medical Condition and Relevant Clinical Context"
+  },
+
+  "tone_spasticity": {
+    "description": "Spasticity in elbow and wrist flexors (Modified Ashworth Scale 2), indicating increased muscle tone",
+    "source": "User Medical Condition"
+  },
+
+  "compensatory_patterns": [
+    "Use of unaffected arm for most tasks",
+    "Possible utilization of trunk for movement support due to upper extremity limitations",
+    "Neglect and decreased proprioception may result in minimal use of affected extremity without conscious effort"
+  ],
+
+  "functional_use": {
+    "expected_abilities": [
+      "Requires moderate assistance with ADLs, suggesting the capability for some arm movements but significantly limited in precision tasks",
+      "Some elbow flexion and minimal shoulder movement might enable gross motion but not fine motor activities"
+    ],
+    "limitations": [
+      "Inability to perform specific tasks requiring fine motor skills, dexterous finger use, and significant strength or range of motion",
+      "Limited participation in tasks requiring bilateral coordination due to hemiparesis and cognitive-perceptual limitations"
+    ]
+  },
+
+  "confidence_notes": "Functional capabilities are based on clinical descriptions and current muscle strength and spasticity observations. Variability exists in muscle strength between muscle groups, implying the need for user-specific assessments for accurate modelling. Cognitive-perceptual limitations add another layer of variability not fully captured by physical assessments.",
+
+  "source_reference": "Quick reference to occupational therapy, Stroke Rehab Guidelines (AHA), General guidelines on hemiplegia and spasticity management"
+}

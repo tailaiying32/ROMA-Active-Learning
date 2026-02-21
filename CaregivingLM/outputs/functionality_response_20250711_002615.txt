@@ -1,0 +1,132 @@
+Query: The patient is a 62-year-old male, 9 months post left MCA ischemic stroke, presenting with mild right hemiparesis. Active range of motion is functionally full in all joints with the exception of mild weakness in right shoulder abduction and fine motor coordination deficits in the right hand. No spasticity is observed (MAS = 0). Strength is graded 4/5 in right upper limb globally, with MMT 3+ for intrinsic hand muscles. Sensory function is intact. The patient demonstrates slow but independent performance of ADLs using the right hand, but fatigues with extended bimanual tasks such as dressing. He compensates with prolonged use of the left hand. Seated balance is excellent.
+Prompt Type: functionality
+Timestamp: 2025-07-11T00:26:15.404141
+--------------------------------------------------------------------------------
+Response:
+```json
+{
+  "condition": "Mild right hemiparesis, 9 months post left MCA ischemic stroke",
+
+  "joint_range_of_motion": {
+    "shoulder_flexion": {
+      "active": "Functionally full",
+      "passive": "Unknown",
+      "source": "Clinical observation"
+    },
+    "shoulder_extension": {
+      "active": "Functionally full",
+      "passive": "Unknown",
+      "source": "Clinical observation"
+    },
+    "shoulder_abduction": {
+      "active": "Slightly reduced due to weakness",
+      "passive": "Unknown",
+      "source": "Clinical observation"
+    },
+    "shoulder_adduction": {
+      "active": "Functionally full",
+      "passive": "Unknown",
+      "source": "Clinical observation"
+    },
+    "shoulder_internal_rotation": {
+      "active": "Functionally full",
+      "passive": "Unknown",
+      "source": "Clinical observation"
+    },
+    "shoulder_external_rotation": {
+      "active": "Functionally full",
+      "passive": "Unknown",
+      "source": "Clinical observation"
+    },
+    "elbow_flexion": {
+      "active": "Functionally full",
+      "passive": "Unknown",
+      "source": "Clinical observation"
+    },
+    "elbow_extension": {
+      "active": "Functionally full",
+      "passive": "Unknown",
+      "source": "Clinical observation"
+    },
+    "forearm_supination": {
+      "active": "Functionally full",
+      "passive": "Unknown",
+      "source": "Clinical observation"
+    },
+    "forearm_pronation": {
+      "active": "Functionally full",
+      "passive": "Unknown",
+      "source": "Clinical observation"
+    },
+    "wrist_flexion": {
+      "active": "Functionally full",
+      "passive": "Unknown",
+      "source": "Clinical observation"
+    },
+    "wrist_extension": {
+      "active": "Functionally full",
+      "passive": "Unknown",
+      "source": "Clinical observation"
+    },
+    "finger_flexion": {
+      "active": "Functionally full",
+      "passive": "Unknown",
+      "source": "Clinical observation"
+    },
+    "finger_extension": {
+      "active": "Functionally full",
+      "passive": "Unknown",
+      "source": "Clinical observation"
+    }
+  },
+
+  "muscle_strength": {
+    "deltoid": { "score": 4, "percent": "100%", "source": "MMT Evaluation" },
+    "biceps": { "score": 4, "percent": "100%", "source": "MMT Evaluation" },
+    "triceps": { "score": 4, "percent": "100%", "source": "MMT Evaluation" },
+    "brachialis": { "score": 4, "percent": "100%", "source": "MMT Evaluation" },
+    "brachioradialis": { "score": 4, "percent": "100%", "source": "MMT Evaluation" },
+    "supinator": { "score": 4, "percent": "100%", "source": "MMT Evaluation" },
+    "pronator_teres": { "score": 4, "percent": "100%", "source": "MMT Evaluation" },
+    "wrist_extensors": { "score": 4, "percent": "100%", "source": "MMT Evaluation" },
+    "wrist_flexors": { "score": 4, "percent": "100%", "source": "MMT Evaluation" },
+    "flexor_digitorum_profundus": { "score": 3.5, "percent": "75-87.5%", "source": "MMT Evaluation" },
+    "flexor_digitorum_superficialis": { "score": 3.5, "percent": "75-87.5%", "source": "MMT Evaluation" },
+    "extensor_digitorum": { "score": 4, "percent": "100%", "source": "MMT Evaluation" },
+    "thenar_muscles": { "score": 3, "percent": "75%", "source": "MMT Evaluation" },
+    "hypothenar_muscles": { "score": 3, "percent": "75%", "source": "MMT Evaluation" },
+    "interossei": { "score": 3, "percent": "75%", "source": "MMT Evaluation" }
+  },
+
+  "motor_control": {
+    "description": "Fine motor coordination deficits in the right hand but capable of slow, independent ADL performance.",
+    "source": "Clinical observation"
+  },
+
+  "tone_spasticity": {
+    "description": "No spasticity observed (MAS = 0).",
+    "source": "Clinical observation"
+  },
+
+  "compensatory_patterns": [
+    "Prolonged use of the left hand with fatigue during extended bimanual tasks.",
+    "Independent performance of ADLs albeit slow with the right hand.",
+    "Use of larger muscle groups for tasks typically requiring fine motor skills due to intrinsic hand muscle weakness."
+  ],
+
+  "functional_use": {
+    "expected_abilities": [
+      "Can perform daily living activities independently but slowly.",
+      "Can use right hand for tasks, but with mild limitations in tasks requiring strength and endurance."
+    ],
+    "limitations": [
+      "Fatigue with extended bimanual tasks.",
+      "Mild weakness during shoulder abduction and intrinsic hand muscle activities, affecting fine motor skills."
+    ]
+  },
+
+  "confidence_notes": "Muscle strength grading and functional abilities are based on clinical observation and MMT evaluation. Performance and capability can vary depending on task demands, fatigue, and compensatory strategy use. "
+
+  "source_reference": "Quick Reference to Occupational Therapy, MMT Evaluation Protocols, Clinical Experience."
+}
+```

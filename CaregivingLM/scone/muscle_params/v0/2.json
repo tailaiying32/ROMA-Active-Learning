@@ -1,0 +1,21 @@
+{
+    "name": "hemiparetic_shoulder_weakness",
+    "muscles": [
+        "delt_clav_a_r",
+        "delt_scap_m_r",
+        "delt_scap_p_r",
+        "supraspi_r",
+        "infraspi_s_r",
+        "infraspi_i_r",
+        "teres_min_r",
+        "teres_maj_r",
+        "subscap_s_r",
+        "subscap_i_r",
+        "trap_scap_m_r",
+        "trap_scap_i_r",
+        "ser_ant_m_r",
+        "ser_ant_i_r"
+    ],
+    "condition_description": "Stroke (Middle Cerebral Artery infarct), hemiparesis",
+    "rationale": "Shoulder girdle control is often compromised due to disruption of corticospinal input, leading to weakness and subluxation. Impairments typically affect rotator cuff and scapulothoracic stabilizers."
+}

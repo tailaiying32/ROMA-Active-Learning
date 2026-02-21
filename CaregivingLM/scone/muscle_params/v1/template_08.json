@@ -1,0 +1,20 @@
+{
+    "name": "template_08",
+    "muscles": [
+        "bic_long_r",
+        "brachiorad_r",
+        "coracobrach_r",
+        "delt_clav_a_r",
+        "infraspi_i_r",
+        "lat_dors_m_r",
+        "pect_maj_thorax_m_r",
+        "ser_ant_i_r",
+        "ser_ant_m_r",
+        "subscap_i_r",
+        "supinator_r",
+        "teres_maj_r",
+        "trap_scap_i_r"
+    ],
+    "condition_description": "Rotator cuff tear (post-stroke or degenerative)",
+    "rationale": "Loss of shoulder stabilization due to supraspinatus/infraspinatus/teres minor weakness."
+}

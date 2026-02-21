@@ -1,0 +1,29 @@
+{
+    "name": "template_09",
+    "muscles": [
+        "bic_brev_r",
+        "brachiorad_r",
+        "coracobrach_r",
+        "delt_clav_a_r",
+        "ext_carpi_ulna_r",
+        "flex_carpi_rad_r",
+        "infraspi_i_r",
+        "infraspi_s_r",
+        "lat_dors_m_r",
+        "lev_scap_r",
+        "pect_maj_thorax_i_r",
+        "pect_maj_thorax_m_r",
+        "pect_min_r",
+        "subscap_i_r",
+        "subscap_s_r",
+        "supraspi_r",
+        "teres_min_r",
+        "trap_clav_s_r",
+        "trap_scap_i_r",
+        "trap_scap_m_r",
+        "tri_lat_r",
+        "tri_long_r"
+    ],
+    "condition_description": "Parkinson\u2019s disease (moderate stage)",
+    "rationale": "Bradykinesia and rigidity reduce active range of motion, especially distally."
+}

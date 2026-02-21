@@ -1,0 +1,47 @@
+{
+  "robot_adaptation_guidelines": {
+    "movement_speed": "Very slow (1-5 cm/s) during feeding task, especially when guiding utensil to mouth to cater for motor control limitations.",
+    "movement_trajectory": "Plan trajectories that allow for small, controlled movements within the user's functional range, avoiding rapid or large movements that could trigger spasticity.",
+    "max_force_applied": {
+      "elbow": "≤ 2 N; to accommodate for limited elbow extension and spasticity without exacerbating spasticity or risking injury.",
+      "wrist": "≤ 2 N; gentle assistance considering the user's limited wrist extension and significant spasticity."
+    },
+    "joint_angle_constraints": {
+      "shoulder_flexion": "Maintain within user's known active range of 0–80° to avoid overstretching and subluxation exacerbation.",
+      "elbow_flexion": "Operate within a cautious range of 0–90°, given the active range of 0–100° to prevent triggering spasticity or pain."
+    },
+    "grasp_assistance": {
+      "support_strategy": "Use of a universal cuff or customized interface to accommodate user's non-functional finger flexion and extension for utensil holding.",
+      "force": "Adjustable, minimal force required to maintain grip on utensil without active finger use."
+    },
+    "sequence_of_actions": [
+      "Stabilize user's arm at the elbow and assist in elevating it from the table.",
+      "Guide arm in a slow, smooth trajectory towards the plate with minimal required shoulder flexion.",
+      "Engage grasp assistance to secure utensil once within reach.",
+      "Aid in scooping food by controlling the elbow and wrist movements.",
+      "Gently guide hand back towards mouth, monitoring for and compensating involuntary movements."
+    ],
+    "postural_support": {
+      "monitoring": "Real-time adjustment based on user's seated posture, with a focus on trunk stability.",
+      "response": "If trunk stability decreases, provide verbal cues for correction or robotic support to ensure safe feeding posture."
+    },
+    "communication_prompts": [
+      "'Let's move your arm towards the plate now.'",
+      "'We're going to scoop some food. Let me know if you're ready.'",
+      "'Now, we'll bring the food to your mouth. Please open your mouth when ready.'"
+    ],
+    "safety_notes": [
+      "Continuously monitor for signs of distress, discomfort, or increased spasticity during task performance.",
+      "Ensure that the robotic system has emergency stop capabilities that the user or caregiver can easily activate."
+    ],
+    "personalization_notes": [
+      "Adjustment of robotic assistance levels required based on user feedback and observed comfort.",
+      "Regular assessment of shoulder subluxation and spasticity level to modify robotic interaction parameters accordingly."
+    ]
+  },
+  "source_citations": [
+    "Quick reference to occupational therapy, Stroke Rehab Guidelines (AHA)",
+    "General guidelines on hemiplegia and spasticity management",
+    "Modification of the toronto rehabilitation institute—hand function test for integration into robot-assisted therapy: technical validation and usability"
+  ]
+}

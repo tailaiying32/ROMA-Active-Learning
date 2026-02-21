@@ -1,0 +1,46 @@
+{
+  "robot_adaptation_guidelines": {
+    "movement_speed": "Robot assistance should be at a very slow and controlled pace given the user's severe upper limb limitations and the presence of intermittent spasticity.",
+    "movement_trajectory": "Implement smooth, linear trajectories for movements within the user's remaining range of motion, avoiding positions known to trigger spasticity.",
+    "max_force_applied": {
+      "upper_limbs": "Do not exceed 2N, particularly for the upper limbs, to prevent triggering spasticity or discomfort.",
+      "trunk_support": "Use up to 5N for gentle guidance or postural support, observing the user's feedback for any signs of discomfort."
+    },
+    "joint_angle_constraints": {
+      "shoulder_flexion": "Limit active assistance to within 0-10° to prevent exacerbating spasticity.",
+      "finger_joints": "Avoid forced manipulation entirely due to absence of voluntary and passive movement range."
+    },
+    "grasp_assistance": {
+      "support_strategy": "Provide robotic assistance to stabilize clothing for the user to visually direct dressing tasks with minimal physical effort.",
+      "force": "Utilize minimal force necessary for holding clothing in place, avoiding any direct contact force on the user's limbs."
+    },
+    "sequence_of_actions": [
+      "Verbally guide the user through each step of dressing, ensuring readiness and comfort.",
+      "Hold the garment open at an accessible level for any possible voluntary movement or visual engagement by the user.",
+      "Assist with one garment at a time, allowing significant pauses for rest due to limited endurance and possible fatigue.",
+      "Offer sensory feedback through the robot's interface to confirm when each task segment is completed successfully."
+    ],
+    "postural_support": {
+      "monitoring": "Continuously monitor for any signs of increased effort from the trunk or neck which might indicate overcompensation or difficulty.",
+      "response": "If overcompensation is detected, pause the task to allow rest, or readjust garment positioning to reduce physical strain."
+    },
+    "communication_prompts": [
+      "Next, we will move the shirt closer to you. Please let me know if you are ready.",
+      "I am here to assist with dressing. I will proceed very slowly.",
+      "Let's take a moment to rest before continuing."
+    ],
+    "safety_notes": [
+      "Ensure emergency stop mechanism is easily accessible by user or caregiver at all times.",
+      "Monitor user's facial expressions and verbal cues closely for any sign of discomfort or distress."
+    ],
+    "personalization_notes": [
+      "Given the severity of limitations in movement and grip, robot-assisted dressing tasks must focus on stabilizing the clothing rather than expecting active participation from the user.",
+      "Incorporate adaptive clothing with larger openings and magnetic or Velcro closures to simplify the dressing process."
+    ]
+  },
+  "source_citations": [
+    "Clinical Observation Notes for Pontine Stroke Rehabilitation",
+    "Occupational Therapy Toolkit: Treatment Guides and Patient Education Handouts",
+    "Adaptations from the Toronto Rehabilitation Institute—Hand Function Test for Robot-Assisted Therapy: Technical Validation and Usability"
+  ]
+}

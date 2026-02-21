@@ -1,0 +1,54 @@
+Query: Generate robot adaptation guidelines for feeding task
+Prompt Type: robot
+Timestamp: 2025-07-11T00:34:25.283988
+--------------------------------------------------------------------------------
+Response:
+```json
+{
+  "robot_adaptation_guidelines": {
+    "movement_speed": "Slow (2-5 cm/s) for fine motor activities to ensure user stability and confidence during feeding. Adjust speed according to user's real-time performance.",
+    "movement_trajectory": "Plan for simple, direct paths with minimal necessary joints movement, especially when moving utensil to mouth, accounting for potential tremors.",
+    "max_force_applied": {
+      "shoulder_region": "Up to 3 N, especially during shoulder abduction to support arm elevation with gentle guidance",
+      "hand_region": "Up to 2 N for grasp assistance to enable a secure yet gentle grip on utensils"
+    },
+    "joint_angle_constraints": {
+      "elbow": "Maintain within functional user range (0-130° flexion) to avoid overextension or discomfort",
+      "wrist": "Keep within 0-60° extension for functional grasp with adjustments for utensil orientation"
+    },
+    "grasp_assistance": {
+      "support_strategy": "Adaptive utensil holding with partial containment to assist with grip stabilization, accommodating mild intrinsic hand muscle weakness.",
+      "force": "1–2 N to ensure utensil is held firmly but not forcefully during task execution"
+    },
+    "sequence_of_actions": [
+      "Stabilize elbow slightly above waist level for optimal mechanics during feeding.",
+      "Guide hand with utensil from plate to mouth using minimal necessary force, ensuring user-driven movement.",
+      "Facilitate pause for user self-regulation and adjustment before each bite.",
+      "Offer adaptive feedback to encourage user's autonomous grip adjustments and posture realignment."
+    ],
+    "postural_support": {
+      "monitoring": "Continuous assessment of seated stability to anticipate and counter balance shifts.",
+      "response": "Automatic adjustment of supporting force based on real-time posture analysis, with verbal prompts for correction if necessary."
+    },
+    "communication_prompts": [
+      "'Moving towards the plate now, let's scoop up some food.'",
+      "'Gently bringing the spoon to your mouth, take your time.'",
+      "'You're in control, I'm here to assist.'"
+    ],
+    "safety_notes": [
+      "Ensure utensil path avoids any sudden movements towards the face or throat.",
+      "Monitor for signs of fatigue or frustration, offering breaks as needed.",
+      "Utilize soft-touch materials for all contact surfaces to minimize risk of injury."
+    ],
+    "personalization_notes": [
+      "Adjust according to user's daily performance variability and provide customisable support level.",
+      "Leverage user's remaining strength and movement capability for a sense of autonomy and accomplishment.",
+      "Incorporate feedback loop for user to adjust robot assistance level according to task fatigue."
+    ]
+  },
+  "source_citations": [
+    "Quick Reference to Occupational Therapy, MMT Evaluation Protocols, Clinical Experience.",
+    "Modification of the Toronto Rehabilitation Institute—Hand Function Test for Integration into Robot-Assisted Therapy: Technical Validation and Usability (data/corpus/10.1186_s12938-025-01384-7.pdf)"
+  ]
+}
+```

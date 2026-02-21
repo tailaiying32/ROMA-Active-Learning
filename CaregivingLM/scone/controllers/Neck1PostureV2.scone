@@ -1,0 +1,26 @@
+$DT = 0.005
+$KP = 2~0.01<0,10>
+$KV = 0.2~0.001<0,10>
+$C0 = 0.05~0.001<0,1>
+
+ReflexController {
+	auto_std_factor = 0.05
+	dual_sided = 1
+
+	BodyPostureMuscleReflex {
+		target = stern_mast source = skull delay = $DT KP = $KP KV = $KV C0 = $C0 }
+	BodyPostureMuscleReflex {
+		target = cleid_mast source = skull delay = $DT KP = $KP KV = $KV C0 = $C0 }
+	BodyPostureMuscleReflex {
+		target = scalenus_med source = skull delay = $DT KP = $KP KV = $KV C0 = $C0 }
+	BodyPostureMuscleReflex {
+		target = long_col_c1thx source = skull delay = $DT KP = $KP KV = $KV C0 = $C0 }
+	BodyPostureMuscleReflex {
+		target = splen_cap_sklthx source = skull delay = $DT KP = $KP KV = $KV C0 = $C0 }
+	BodyPostureMuscleReflex {
+		target = semi_cap_sklthx source = skull delay = $DT KP = $KP KV = $KV C0 = $C0 }
+	#BodyPostureMuscleReflex {
+		#target = lev_scap source = skull delay = $DT KP = $KP KV = $KV C0 = $C0 }
+	#BodyPostureMuscleReflex {
+		#target = trap_clav source = skull delay = $DT KP = $KP KV = $KV C0 = $C0 }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "template_18",
+    "muscles": [
+        "bic_brev_r",
+        "bic_long_r",
+        "infraspi_s_r",
+        "lev_scap_r",
+        "pect_maj_thorax_i_r",
+        "pronator_teres_r",
+        "subscap_s_r",
+        "supinator_r",
+        "trap_scap_i_r",
+        "trap_scap_s_r"
+    ],
+    "condition_description": "Rheumatoid arthritis",
+    "rationale": "Wrist and finger flexors weakened by chronic inflammation; proximal muscles often preserved."
+}

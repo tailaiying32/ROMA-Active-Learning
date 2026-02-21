@@ -1,0 +1,21 @@
+{
+    "name": "template_21",
+    "muscles": [
+        "brachiorad_r",
+        "ext_carpi_rad_long_r",
+        "ext_carpi_ulna_r",
+        "lat_dors_i_r",
+        "lat_dors_m_r",
+        "lev_scap_r",
+        "pronator_teres_r",
+        "rhom_i_r",
+        "rhom_s_r",
+        "ser_ant_i_r",
+        "ser_ant_m_r",
+        "supinator_r",
+        "trap_scap_m_r",
+        "trap_scap_s_r"
+    ],
+    "condition_description": "Shoulder dislocation (anterior)",
+    "rationale": "Weakness in rotator cuff and anterior deltoid due to joint instability or immobilization."
+}

@@ -1,0 +1,31 @@
+template_id,condition,severity,focus,n_affected_<0.8,n_affected_<0.6,min_factor,max_factor
+template_01,Stroke hemiparesis (flexor synergy),mild,mixed,9,0,0.6,1.0
+template_02,Stroke hemiparesis (flexor synergy),severe,mixed,26,9,0.3,1.0
+template_03,Stroke hemiparesis (extensor synergy),mild,mixed,12,0,0.6,1.0
+template_04,Stroke hemiparesis (extensor synergy),severe,mixed,25,12,0.35,1.0
+template_05,SCI C5 (motor incomplete),mild,elbow/shoulder,16,2,0.3,1.0
+template_06,SCI C5 (motor incomplete),severe,elbow/shoulder,25,16,0.15,1.0
+template_07,SCI C6 (motor incomplete),mild,elbow,2,2,0.5,1.0
+template_08,SCI C6 (motor incomplete),severe,elbow,11,2,0.2,1.0
+template_09,SCI C7 (motor incomplete),mild,elbow,2,0,0.7,1.0
+template_10,SCI C7 (motor incomplete),severe,elbow,2,2,0.5,1.0
+template_11,Rotator cuff tear (SS/IS),mild,shoulder,4,4,0.55,1.0
+template_12,Rotator cuff tear (SS/IS),severe,shoulder,7,4,0.25,1.0
+template_13,Subscapularis tear,mild,shoulder,2,0,0.6,1.0
+template_14,Subscapularis tear,severe,shoulder,9,2,0.3,1.0
+template_15,Frozen shoulder (adhesive capsulitis),mild,shoulder,9,0,0.7,1.0
+template_16,Frozen shoulder (adhesive capsulitis),severe,shoulder,18,9,0.4,1.0
+template_17,Brachial plexus injury (upper trunk C5–C6),mild,shoulder/elbow,12,0,0.6,1.0
+template_18,Brachial plexus injury (upper trunk C5–C6),severe,shoulder/elbow,12,12,0.3,1.0
+template_19,Multiple sclerosis (proximal girdle),mild,proximal,9,0,0.75,1.0
+template_20,Multiple sclerosis (proximal girdle),severe,proximal,14,9,0.5,1.0
+template_21,Cerebral palsy (spastic flexor synergy),mild,mixed,9,0,0.65,1.0
+template_22,Cerebral palsy (spastic flexor synergy),severe,mixed,21,9,0.35,1.0
+template_23,Cerebral palsy (hypotonia),mild,proximal,18,0,0.75,1.0
+template_24,Cerebral palsy (hypotonia),severe,proximal,18,9,0.55,1.0
+template_25,Parkinson’s disease (rigidity),mild,proximal,0,0,0.8,1.0
+template_26,Parkinson’s disease (rigidity),severe,proximal,9,0,0.6,1.0
+template_27,Guillain–Barré (residual proximal),mild,proximal,7,0,0.75,1.0
+template_28,Guillain–Barré (residual proximal),severe,proximal,12,7,0.55,1.0
+template_29,Scapular winging (long thoracic palsy),mild,scapular,5,5,0.5,1.0
+template_30,Scapular winging (long thoracic palsy),severe,scapular,12,5,0.2,1.0

@@ -1,0 +1,19 @@
+{
+    "name": "template_15",
+    "muscles": [
+        "bic_brev_r",
+        "brach_r",
+        "ext_carpi_rad_brev_r",
+        "infraspi_s_r",
+        "lev_scap_r",
+        "pronator_teres_r",
+        "rhom_i_r",
+        "rhom_s_r",
+        "ser_ant_m_r",
+        "subscap_s_r",
+        "supraspi_r",
+        "trap_scap_s_r"
+    ],
+    "condition_description": "Ataxia (cerebellar lesion)",
+    "rationale": "Poor coordination and low tone in proximal muscles."
+}

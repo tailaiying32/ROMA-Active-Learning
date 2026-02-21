@@ -1,0 +1,19 @@
+{
+    "name": "template_13",
+    "muscles": [
+        "delt_scap_m_r",
+        "delt_scap_p_r",
+        "flex_carpi_rad_r",
+        "infraspi_i_r",
+        "infraspi_s_r",
+        "pect_maj_thorax_m_r",
+        "rhom_i_r",
+        "rhom_s_r",
+        "supinator_r",
+        "teres_maj_r",
+        "trap_scap_i_r",
+        "trap_scap_m_r"
+    ],
+    "condition_description": "Orthopedic shoulder injury",
+    "rationale": "Rotator cuff and deltoid weakness due to trauma or surgical intervention."
+}

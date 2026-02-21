@@ -1,0 +1,27 @@
+{
+    "name": "template_28",
+    "muscles": [
+        "brach_r",
+        "brachiorad_r",
+        "ext_carpi_rad_brev_r",
+        "flex_carpi_rad_r",
+        "lat_dors_i_r",
+        "lat_dors_m_r",
+        "lev_scap_r",
+        "pect_maj_thorax_i_r",
+        "pect_min_r",
+        "ser_ant_i_r",
+        "ser_ant_m_r",
+        "ser_ant_s_r",
+        "subscap_i_r",
+        "supinator_r",
+        "supraspi_r",
+        "teres_maj_r",
+        "teres_min_r",
+        "trap_scap_i_r",
+        "trap_scap_s_r",
+        "tri_long_r"
+    ],
+    "condition_description": "Chronic regional pain syndrome (CRPS)",
+    "rationale": "Disuse and guarding cause selective weakness in affected limb."
+}

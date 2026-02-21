@@ -1,0 +1,20 @@
+{
+    "name": "template_26",
+    "muscles": [
+        "delt_scap_p_r",
+        "ext_carpi_rad_brev_r",
+        "ext_carpi_ulna_r",
+        "infraspi_i_r",
+        "infraspi_s_r",
+        "lat_dors_i_r",
+        "pronator_teres_r",
+        "rhom_i_r",
+        "rhom_s_r",
+        "ser_ant_i_r",
+        "ser_ant_m_r",
+        "supraspi_r",
+        "teres_min_r"
+    ],
+    "condition_description": "Thoracic outlet syndrome",
+    "rationale": "Compression affects brachial plexus, causing patchy weakness in arm and shoulder."
+}

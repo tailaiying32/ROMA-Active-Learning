@@ -1,0 +1,12 @@
+{
+    "vector_store_dir": "data/vectors",
+    "collection_name": "caregiving_documents_openai",
+    "prompt_template_path": "src/prompts/default_template.txt",
+    "cache_dir": "data/cache",
+    "openai_model": "gpt-4-turbo-preview",
+    "documents_dir": "data/corpus",
+    "processed_dir": "data/processed",
+    "chunk_size": 1000,
+    "chunk_overlap": 300,
+    "max_tokens_per_chunk": 10000
+} 

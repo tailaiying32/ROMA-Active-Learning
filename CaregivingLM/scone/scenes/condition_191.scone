@@ -1,0 +1,108 @@
+CmaOptimizer {
+	signature_prefix = DATE_TIME
+	enable_boundary_transformer = 1
+	random_seed = 42
+	flat_fitness_epsilon = 1e-6
+	window_size = 1000
+	min_progress = 1e-5
+
+	SimulationObjective {
+		$rest_dur = 1
+		$trg_dur = 1.5
+		$react_dur = 1.0
+		signature_postfix = T10
+		max_duration = 3
+		
+		ModelHyfydyPrecise {
+			model_file = ../models/HSA13T-2025-06-26.hfd
+			state_init_file = ../init/InitHSA13_bs.zml
+			fixed_control_step_size = 0.005
+			zero_velocity_equilibration = 1
+			
+			model_options {
+				use_legacy_pin_joints = 0
+				joint_rotational_damping = 0.02
+			}
+
+			Properties {
+				trap_scap_m_r {max_isometric_force.factor = 0.318559}
+				trap_scap_s_r {max_isometric_force.factor = 0.203653}
+				trap_scap_i_r {max_isometric_force.factor = 0.297750}
+				trap_clav_s_r {max_isometric_force.factor = 0.349624}
+				ser_ant_i_r {max_isometric_force.factor = 0.292792}
+				ser_ant_m_r {max_isometric_force.factor = 0.395612}
+				ser_ant_s_r {max_isometric_force.factor = 0.321116}
+				rhom_s_r {max_isometric_force.factor = 0.289858}
+				rhom_i_r {max_isometric_force.factor = 0.180539}
+				lev_scap_r {max_isometric_force.factor = 0.223704}
+				pect_min_r {max_isometric_force.factor = 0.058197}
+				delt_clav_a_r {max_isometric_force.factor = 0.078794}
+				delt_scap_p_r {max_isometric_force.factor = 0.213778}
+				delt_scap_m_r {max_isometric_force.factor = 0.083222}
+				lat_dors_m_r {max_isometric_force.factor = 0.022243}
+				lat_dors_i_r {max_isometric_force.factor = 0.079600}
+				pect_maj_clav_s_r {max_isometric_force.factor = 0.131234}
+				pect_maj_thorax_i_r {max_isometric_force.factor = 0.080633}
+				pect_maj_thorax_m_r {max_isometric_force.factor = 0.027652}
+				teres_maj_r {max_isometric_force.factor = 0.205211}
+				infraspi_i_r {max_isometric_force.factor = 0.088585}
+				infraspi_s_r {max_isometric_force.factor = 0.099862}
+				teres_min_r {max_isometric_force.factor = 0.250615}
+				subscap_s_r {max_isometric_force.factor = 0.201813}
+				subscap_i_r {max_isometric_force.factor = 0.149314}
+				supraspi_r {max_isometric_force.factor = 0.092025}
+				tri_long_r {max_isometric_force.factor = 0.078290}
+				tri_lat_r {max_isometric_force.factor = 0.057700}
+				coracobrach_r {max_isometric_force.factor = 0.145882}
+				bic_long_r {max_isometric_force.factor = 0.062939}
+				bic_brev_r {max_isometric_force.factor = 0.095582}
+				brach_r {max_isometric_force.factor = 0.080231}
+				brachiorad_r {max_isometric_force.factor = 0.054788}
+				supinator_r {max_isometric_force.factor = 0.275183}
+				pronator_teres_r {max_isometric_force.factor = 0.086742}
+				ext_carpi_rad_long_r {max_isometric_force.factor = 0.207826}
+				ext_carpi_rad_brev_r {max_isometric_force.factor = 0.398567}
+				ext_carpi_ulna_r {max_isometric_force.factor = 0.263656}
+				flex_carpi_rad_r {max_isometric_force.factor = 0.279520}
+				flex_carpi_ulna_r {max_isometric_force.factor = 0.343260}
+			}
+		}
+		
+		# Sequential FeedForward Controller
+		SequentialController {
+			transition_intervals = [ $rest_dur ]
+			FeedForwardController { name = Relax1 Constant { value = 0.01 } }
+			
+			FeedForwardController {
+				include = "*_r"
+				PieceWiseLinear {
+					control_points = 2
+					control_point_y = 0.015~0.001<0,1>
+					control_point_dt = 0.4~0.01<0.1,1.0>
+					flat_extrapolation = 1
+				}
+			}
+		}
+		
+		# Reaching Measure
+		CompositeMeasure {
+			use_first_non_zero_result = 1
+			ScriptMeasure {
+				weight = 100
+				threshold = 0.05
+				vel_penalty = 0.2
+				start_time = $rest_dur
+				target_duration = $trg_dur
+				react_time = $react_dur
+				show_target = 1
+				minimize = 1
+				target_body = "hand_r"
+				script_file = "../measures/ReachSingleArmMeasure.lua"
+			}
+			EffortMeasure {
+				weight = 0.1
+				measure_type = SquaredMuscleActivation
+			}
+		}
+	}
+}

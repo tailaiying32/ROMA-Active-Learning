@@ -1,0 +1,1 @@
+python active_learning/test/toy_2d/run_toy_2d_animation.py --particles 103 --shape random --seed 8 --output_dir active_learning/images/toy_2d/seed_1

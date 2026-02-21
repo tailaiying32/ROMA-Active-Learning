@@ -1,0 +1,14 @@
+{
+    "name": "triceps_wrist_extensor_weakness",
+    "muscles": [
+        "tri_long_r",
+        "tri_lat_r",
+        "ext_carpi_rad_long_r",
+        "ext_carpi_rad_brev_r",
+        "ext_carpi_ulna_r",
+        "supinator_r",
+        "brachiorad_r"
+    ],
+    "condition_description": "Incomplete SCI (C6-C7), MS",
+    "rationale": "Elbow flexion may be preserved, but triceps and wrist extensors are often impaired. Common in cervical SCI and MS with distal motor impairment."
+}

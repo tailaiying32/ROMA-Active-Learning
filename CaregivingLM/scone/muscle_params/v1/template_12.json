@@ -1,0 +1,17 @@
+{
+    "name": "template_12",
+    "muscles": [
+        "bic_brev_r",
+        "coracobrach_r",
+        "ext_carpi_ulna_r",
+        "flex_carpi_ulna_r",
+        "infraspi_s_r",
+        "lat_dors_i_r",
+        "lat_dors_m_r",
+        "subscap_i_r",
+        "subscap_s_r",
+        "trap_scap_i_r"
+    ],
+    "condition_description": "Muscular dystrophy (limb-girdle type)",
+    "rationale": "Progressive weakness in shoulder flexors and extensors with preserved distal function early on."
+}

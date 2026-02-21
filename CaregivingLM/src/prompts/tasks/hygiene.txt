@@ -1,0 +1,27 @@
+# Hygiene Task Analysis
+
+## Functional Abilities Required
+- Shoulder and elbow ROM for reaching face, hair, and body areas
+- Hand grasp and manipulation for holding hygiene tools
+- Trunk control and balance for seated or standing hygiene
+- Coordination for bilateral tasks (washing, drying)
+- Fine motor skills for detailed hygiene tasks
+
+## User Limitations That Matter Most
+- Limited reach due to ROM restrictions or weakness
+- Poor hand strength or coordination for tool manipulation
+- Balance issues affecting seated or standing hygiene
+- Cognitive deficits affecting task sequencing
+- Sensory impairments affecting hygiene awareness
+
+## Variation in Assistance Strategies
+- **Mild impairment**: Adaptive tools (long-handled brushes, electric toothbrushes)
+- **Moderate impairment**: Seated hygiene with grab bars, adapted tools
+- **Severe impairment**: Assisted hygiene with caregiver support, specialized equipment
+
+## Robot Adaptation Considerations
+- Movement speed should be gentle and controlled for hygiene tasks
+- Trajectory planning should respect personal space and comfort zones
+- Grasp assistance should support tool holding without causing discomfort
+- Postural support may be needed for users with balance issues
+- Communication should be respectful and maintain dignity during personal care tasks

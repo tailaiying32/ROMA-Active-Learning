@@ -1,0 +1,18 @@
+{
+    "name": "template_29",
+    "muscles": [
+        "coracobrach_r",
+        "ext_carpi_ulna_r",
+        "infraspi_s_r",
+        "lat_dors_i_r",
+        "lat_dors_m_r",
+        "pect_maj_clav_s_r",
+        "rhom_i_r",
+        "rhom_s_r",
+        "ser_ant_m_r",
+        "teres_maj_r",
+        "trap_scap_i_r"
+    ],
+    "condition_description": "Tendon rupture (e.g., distal biceps or triceps)",
+    "rationale": "Loss of elbow flexion or extension due to isolated tendon injury."
+}

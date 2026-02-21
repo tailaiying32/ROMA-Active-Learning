@@ -1,0 +1,55 @@
+Query: Generate robot adaptation guidelines for dressing task
+Prompt Type: robot
+Timestamp: 2025-07-11T00:27:48.588276
+--------------------------------------------------------------------------------
+Response:
+```json
+{
+  "robot_adaptation_guidelines": {
+    "movement_speed": "Slow (5 cm/s) to accommodate fine motor coordination deficits and weakness, especially during manipulation of closures like buttons and zippers.",
+    "movement_trajectory": "Trajectories should be planned to minimize the need for shoulder abduction and grasp force, especially in tasks requiring fine motor control or extended reach.",
+    "max_force_applied": {
+      "affected_arm_support": "<= 3N to avoid exacerbation of weakness or unintentional injury.",
+      "clothing_stabilization": "<= 2N to secure clothing without causing it to stretch or become difficult for the user to handle."
+    },
+    "joint_angle_constraints": {
+      "shoulder_abduction": "Limit to the user's comfortable range, avoiding positions that require 'slightly reduced due to weakness' maximum effort.",
+      "finger_flexion": "Consider the user's diminished strength (75-87.5% of expected) when expecting the user to hold or manipulate small objects like buttons."
+    },
+    "grasp_assistance": {
+      "support_strategy": "Provide moderate support for stabilizing clothes during dressing, allowing the user to focus on gross motor movements without worry of clothing slipping.",
+      "force": "Keep grasp force minimal (< 2N) when assisting with fabric manipulation to encourage user independence and avoid material damage."
+    },
+    "sequence_of_actions": [
+      "Stabilize the shirt at a lower height to minimize the need for arm lifting.",
+      "Support the insertion of the non-affected arm into its sleeve first to optimize user comfort and minimize frustration.",
+      "Guide the affected arm gently, allowing for pauses if fatigue is indicated.",
+      "Secure pants at the waist and stabilize them, enabling the user to step in without needing to bend excessively.",
+      "Assist with fasteners last, providing physical support for closures that the user finds challenging."
+    ],
+    "postural_support": {
+      "monitoring": "Continuous assessment for signs of trunk leaning or balance compromise during dressing tasks.",
+      "response": "Immediate stabilization should leaning exceed safe thresholds, using gentle tactile cues for posture correction."
+    },
+    "communication_prompts": [
+      "'Let's start with your stronger side for the shirt. Ready?'",
+      "'I’ll hold this part steady, you focus on fitting your arm through here.'",
+      "'Doing great, let's try the pants now. I’ll support them here for you.'",
+      "'Almost done, let's secure the buttons together.'"
+    ],
+    "safety_notes": [
+      "Ensure robotic interface has soft, rounded edges to prevent accidental injury during assistance.",
+      "Monitor user facial expression and voice for signs of discomfort, stopping immediately if distress is observed."
+    ],
+    "personalization_notes": [
+      "Adaptive equipment such as button hooks and extended zipper pulls may still be used in conjunction with robotic assistance for enhanced independence.",
+      "Consider user fatigue levels throughout the dressing process and be prepared to suggest breaks or modify the approach as needed."
+    ]
+  },
+  "source_citations": [
+    "Occupational Therapy Toolkit: Treatment Guides (Hall, 2018)",
+    "Modification of the Toronto Rehabilitation Institute—Hand Function Test (Raji et al., 2025)",
+    "Quick Reference to Occupational Therapy (Pedretti and Foti, 1996)"
+  ]
+}
+```

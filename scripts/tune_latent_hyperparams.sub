@@ -1,0 +1,31 @@
+#!/bin/bash
+#SBATCH --job-name=active_learning
+#SBATCH --partition=gpu
+#SBATCH --gres=gpu:nvidia_rtx_a6000:1
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=16G
+#SBATCH --time=12:00:00
+#SBATCH --output=logs/%j_tuning.out
+#SBATCH --error=logs/%j_tuning.err
+#SBATCH --array=0-9
+
+module purge
+
+# Add a line to log the Job ID
+echo "Slurm Job ID: $SLURM_JOB_ID"
+
+# Activate your environment
+source ~/miniforge3/bin/activate active_learning
+
+# Get the study name from the first argument, default to "hyperparameter_optimization_study"
+STUDY_NAME=${1:-hyperparameter_optimization_study}
+
+# Debugging info (written to your .out file)
+echo "Starting job on node: $(hostname)"
+nvidia-smi
+python -c "import torch; print(f'CUDA available: {torch.cuda.is_available()}'); print(f'GPU: {torch.cuda.get_device_name(0)}')"
+
+# Run the optimization
+python ~/ROMA/active_learning/src/tune_latent_hyperparameters.py --study-name "$STUDY_NAME"

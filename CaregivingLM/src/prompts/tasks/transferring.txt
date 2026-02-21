@@ -1,0 +1,27 @@
+# Transferring Task Analysis
+
+## Functional Abilities Required
+- Lower extremity strength for standing and weight bearing
+- Trunk control and balance for transfer movements
+- Upper extremity strength for support and propulsion
+- Coordination for smooth transfer sequences
+- Cognitive awareness for safety during transfers
+
+## User Limitations That Matter Most
+- Poor lower extremity strength affecting standing ability
+- Balance issues affecting transfer stability
+- Limited upper extremity strength for support
+- Coordination deficits affecting transfer smoothness
+- Cognitive deficits affecting transfer safety
+
+## Variation in Assistance Strategies
+- **Mild impairment**: Stand-by assistance, grab bars, transfer boards
+- **Moderate impairment**: Physical assistance, mechanical lifts, slide boards
+- **Severe impairment**: Full mechanical lift assistance, specialized transfer equipment
+
+## Robot Adaptation Considerations
+- Movement speed should be extremely slow and controlled for transfers
+- Trajectory planning should prioritize stability and safety
+- Grasp assistance should provide secure support throughout the transfer
+- Postural support is critical for maintaining balance during transfers
+- Communication should be clear and provide step-by-step guidance

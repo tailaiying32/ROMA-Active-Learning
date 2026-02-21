@@ -1,0 +1,48 @@
+{
+  "robot_adaption_guidelines": {
+    "movement_speed": "Slow (2-5 cm/s) to accommodate for spasticity, specially during initial contact and dressing tasks.",
+    "movement_trajectory": "Avoid overhead and complex multi-joint movements for affected side. Favor trajectories within the user's comfortable visual and physical reach, especially frontal and lateral planes below shoulder height.",
+    "max_force_applied": {
+      "left_arm_support": "≤ 3 N for stability without exacerbating spasticity",
+      "trunk_support": "≤ 8 N to assist with upright posture and counterbalance during dressing"
+    },
+    "joint_angle_constraints": {
+      "shoulder_flexion": "Limit to 80° based on user's active range to prevent discomfort or injury",
+      "elbow_extension": "Limit approach to 80° to accommodate user's spasticity and available range without forcing position"
+    },
+    "grasp_assistance": {
+      "support_strategy": "Soft gripping with adaptive feedback to accommodate for involuntary movements and spasticity, ensuring clothing is gently guided without pulling or pushing user's limbs.",
+      "force": "Use minimal required force to stabilize or guide clothing, auto-adjust based on user's muscle resistance feedback"
+    },
+    "sequence_of_actions": [
+      "Stabilize garment and guide user's unaffected arm first",
+      "Support affected arm minimally at elbow, avoiding direct grip on paralytic hand",
+      "Assist in slipping garment over the head or body with gentle upward and forward motion, respecting joint constraints",
+      "Align garment around the trunk before attempting to address the affected arm",
+      "Guide dressing aid (if used) for the affected arm's sleeve with minimal rotation or elevation"
+    ],
+    "postural_support": {
+      "monitory": "Continuous monitoring of trunk position to detect any unsafe lean or shift beyond user's balance point",
+      "response": "Immediate subtle robotic support or cue to realign trunk, utilizing either verbal prompts or light physical guidance"
+    },
+    "communication_prompts": [
+      "'Let's gently start dressing with your right arm'",
+      "'I will move very slowly and gently. Tell me if anything feels uncomfortable.'",
+      "'Great job! Now, let's carefully get the left sleeve on with a little help.'"
+    ],
+    "safety_notes": [
+      "Do not exceed known range of motion for any joint, especially the shoulder and elbow.",
+      "Monitor for any signs of distress, pain, or increased tone during the process which indicates stop or parameter adjustment."
+    ],
+    "personalization_notes": [
+      "Use of soft grips and adaptive interfaces considering user's spasticity and partial shoulder subluxation.",
+      "Prioritize verbal engagement throughout the task due to cognitive limitations and to foster a sense of control and participation.",
+      "Clothing modified with Velcro and other adaptive features should be made ready to accommodate for functional limitations."
+    ]
+  },
+  "source_citations": [
+    "Occupational Therapy Toolkit: Treatment Guides and Patient Education Handouts",
+    "Quick Reference to Occupational Therapy",
+    "Modification of the Toronto Rehabilitation Institute—Hand Function Test for Integration into Robot-Assisted Therapy: Technical Validation and Usability"
+  ]
+}
